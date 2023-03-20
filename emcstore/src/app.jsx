@@ -1,6 +1,6 @@
 
 import Counter from '../components/Counter/Counter'
-import './app.css'
+import './app.scss'
 
 export function App() {
 
