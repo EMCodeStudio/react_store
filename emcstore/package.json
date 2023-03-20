@@ -9,7 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.13",
+    "bootstrap": "^5.2.3",
     "preact": "^10.13.0",
+    "react-bootstrap": "^2.7.2",
     "sass": "^1.59.3"
   },
   "devDependencies": {
