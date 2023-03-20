@@ -8,8 +8,8 @@ export function App() {
 
   return (
     <>
-    <Header/>
-     {/*  <Counter /> */}
+    <Header />
+    <Counter />
     </>
   )
 }
