@@ -1,5 +1,6 @@
 
-import react, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'preact/hooks'
+
 
 import './Header.scss'
 
@@ -7,14 +8,16 @@ import './Header.scss'
 const Header = () => {
 
 
+  return (
+    <>
 
-    return (
-      <>
-      
-      
-      </>
-            
-    )
+
+
+    </>
+
+
+
+  )
 }
 
 export default Header

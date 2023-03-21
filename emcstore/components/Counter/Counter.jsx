@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import preactLogo from '../../src/assets/preact.svg'
 import viteLogo from '../../public/vite.svg'
+
+
 const Counter = () => {
     const [count, setCount] = useState(0)
     return (
@@ -17,7 +19,7 @@ const Counter = () => {
                 <h1 className='title'>Vite + Preact</h1>
                 <div class="card">
                     <button onClick={() => setCount((count) => count + 1)}>
-                        count is {count}
+                    count is {count}
                     </button>
                     <p>
                         Edit <code>src/app.jsx</code> and save to test HMR
