@@ -5,6 +5,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { ButtonSearch } from '../Styled/Buttons/Buttons';
+import { InputSearch } from '../Styled/Inputs/Inputs';
 import './Header_Menu.scss'
 function Header_Menu() {
 
@@ -35,7 +37,7 @@ function Header_Menu() {
                                 <Nav.Link href="#action2">
                                     Ofertas
                                 </Nav.Link>
-                                <NavDropdown title="Categorias" id={`offcanvasNavbarDropdown-expand-lg`}>
+                                <NavDropdown className='mb-2' title="Categorias" id={`offcanvasNavbarDropdown-expand-lg`}>
                                     <NavDropdown.Item href="#action3">
                                         Calzado
                                     </NavDropdown.Item>
@@ -50,15 +52,17 @@ function Header_Menu() {
                             </Nav>
 
                             <Form className="d-flex">
-
+{/* 
                                 <Form.Control 
                                     type="search"
                                     placeholder="Search"
-                                    className="campoBusqueda"
+                                    className="inputSearch"
                                     aria-label="Search"
-                                />
+                                /> */}
 
-                                <Button className="botonBusqueda" variant=" outline-success">Buscar</Button>
+                               <InputSearch />
+
+                                <ButtonSearch primaryColor> Buscar</ButtonSearch>
                             </Form>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>

@@ -7,3 +7,4 @@
 - yarn
 - yarn add sass
 - npm install react-bootstrap bootstrap
+- yarn add styled-components
