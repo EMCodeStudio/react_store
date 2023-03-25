@@ -1,4 +1,4 @@
-import Button from 'react-bootstrap/Button';
+/* import Button from 'react-bootstrap/Button'; */
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
@@ -8,6 +8,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { ButtonSearch } from '../Styled/Buttons/Buttons';
 import { InputSearch } from '../Styled/Inputs/Inputs';
 import './Header_Menu.scss'
+import SearchIcon from '@mui/icons-material/Search';
 function Header_Menu() {
 
 
@@ -62,7 +63,7 @@ function Header_Menu() {
 
                                <InputSearch />
 
-                                <ButtonSearch primaryColor> Buscar</ButtonSearch>
+                                <ButtonSearch primaryColor><SearchIcon /> Buscar</ButtonSearch>
                             </Form>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
