@@ -14,12 +14,11 @@ background-color: ${props => props.primaryColor ? "var(--color-purple)" : "var(-
 `;
 
 const ButtonSearch = styled(Button)`
-
-border: none;
+border: 1px solid gray;
 display: inline-block;
 text-align: center;
 text-decoration:none;
-
+border-left:none;
 
 `
 

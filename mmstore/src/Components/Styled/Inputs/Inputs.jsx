@@ -7,7 +7,10 @@ const InputSearch = styled.input.attrs({type: "text", placeholder: "Busqueda"})`
     &:focus{
         outline: none;
     }
-    border: none;
+    border: 1px solid gray;
+    background-color:white;
+    border-right:none;
+    color: gray;
 `;
 
 export {InputSearch};

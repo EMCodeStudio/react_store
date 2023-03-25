@@ -63,7 +63,7 @@ function Header_Menu() {
 
                                <InputSearch />
 
-                                <ButtonSearch primaryColor><SearchIcon /> Buscar</ButtonSearch>
+                                <ButtonSearch primaryColor><SearchIcon /></ButtonSearch>
                             </Form>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
