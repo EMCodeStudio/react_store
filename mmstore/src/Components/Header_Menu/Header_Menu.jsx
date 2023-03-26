@@ -10,21 +10,17 @@ import { InputSearch } from '../Styled/Inputs/Inputs';
 import './Header_Menu.scss'
 import SearchIcon from '@mui/icons-material/Search';
 function Header_Menu() {
-
-
     return (
         <>
-
-
-            <Navbar bg="light" expand="lg" className="mb-3">
+        <div className="headerMenu">
+            <Navbar bg="light" expand="lg">
                 <Container fluid>
                     <Navbar.Brand href="#">MMStore</Navbar.Brand>
                     <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
                     <Navbar.Offcanvas
                         id={`offcanvasNavbar-expand-lg`}
                         aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
-                        placement="end"
-                    >
+                        placement="end">
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
                                 Menu
@@ -40,6 +36,9 @@ function Header_Menu() {
                                 </Nav.Link>
                                 <NavDropdown className='mb-2' title="Categorias" id={`offcanvasNavbarDropdown-expand-lg`}>
                                     <NavDropdown.Item href="#action3">
+                                        Ropa
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item href="#action3">
                                         Calzado
                                     </NavDropdown.Item>
                                     <NavDropdown.Item href="#action4">
@@ -47,31 +46,23 @@ function Header_Menu() {
                                     </NavDropdown.Item>
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item href="#action5">
-                                        Fitness
+                                        Accesorios
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item href="#action5">
+                                        Cuidado Personal
                                     </NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
-
                             <Form className="d-flex">
-{/* 
-                                <Form.Control 
-                                    type="search"
-                                    placeholder="Search"
-                                    className="inputSearch"
-                                    aria-label="Search"
-                                /> */}
-
-                               <InputSearch />
-
+                                <InputSearch />
                                 <ButtonSearch primaryColor><SearchIcon /></ButtonSearch>
                             </Form>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
                 </Container>
             </Navbar>
-
+        </div>
         </>
     );
 }
-
 export default Header_Menu;
