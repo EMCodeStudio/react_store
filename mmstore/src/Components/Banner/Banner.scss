@@ -1,21 +1,24 @@
 .banner {
-background-color: rgb(26, 122, 206);
+  background-color: rgb(26, 122, 206);
 
   .coverDark {
     height: 100%;
     width: 100%;
     background: var(--color-black-gradient);
     background-size: cover, contain;
-   /*  background-position: center, right, left, bottom; */
+    /*  background-position: center, right, left, bottom; */
     position: absolute;
     background-repeat: no-repeat;
     z-index: 1001;
   }
 
   .textBanner {
+    width: 100%;
+    justify-content: center;
     z-index: 1002 !important;
     position: absolute;
-    bottom: 50px;
+    bottom: 30px;
+
   }
 
   .bannerImage {
