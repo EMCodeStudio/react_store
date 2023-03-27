@@ -4,8 +4,8 @@ import './Banner.scss'
 
 function Banner() {
     return (
-        <div className="banner">
-            <Carousel>
+        <div className="banner mt-5">
+            <Carousel >
                 {
                     dataBanner.map((data) => (
                         <Carousel.Item key={data.id}>
