@@ -17,8 +17,8 @@ function Banner() {
                             />
                             <Carousel.Caption>
                                 <div className="textBanner">
-                                    <h3>First slide label</h3>
-                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                    <h3 className='text-light'>{data.title}</h3>
+                                    <p>{data.subtitle}</p>
                                 </div>
                             </Carousel.Caption>
                         </Carousel.Item>

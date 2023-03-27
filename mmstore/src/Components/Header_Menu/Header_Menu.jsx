@@ -13,28 +13,28 @@ function Header_Menu() {
     return (
         <>
         <div className="headerMenu">
-            <Navbar bg="light" expand="lg">
+            <Navbar className='navbarMenu' expand="lg">
                 <Container fluid>
-                    <Navbar.Brand href="#">MMStore</Navbar.Brand>
+                    <Navbar.Brand className='text-white' href="#">MMStore</Navbar.Brand>
                     <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
                     <Navbar.Offcanvas
                         id={`offcanvasNavbar-expand-lg`}
                         aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
                         placement="end">
-                        <Offcanvas.Header closeButton>
+                        <Offcanvas.Header closeButton >
                             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
                                 Menu
                             </Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
-                            <Nav className="justify-content-end flex-grow-1 pe-3">
-                                <Nav.Link href="#action1">
-                                    Inicio
+                            <Nav className="justify-content-end flex-grow-1 pe-3"  >
+                                <Nav.Link href="#action1" className='linkMenu'>
+                                    INICIO
                                 </Nav.Link>
-                                <Nav.Link href="#action2">
-                                    Ofertas
+                                <Nav.Link href="#action2" className='linkMenu'>
+                                    OFERTAS
                                 </Nav.Link>
-                                <NavDropdown className='mb-2' title="Categorias" id={`offcanvasNavbarDropdown-expand-lg`}>
+                                <NavDropdown className='mb-2 linkMenu' title="CATEGORIAS" id={`offcanvasNavbarDropdown-expand-lg`}>
                                     <NavDropdown.Item href="#action3">
                                         Ropa
                                     </NavDropdown.Item>

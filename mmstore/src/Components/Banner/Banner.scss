@@ -28,10 +28,11 @@
   }
 
   .bannerImage {
-    height: 84vh;
+    height: 85vh;
     @media (max-width: 920px) {
       object-fit: cover;
     }
+   
 
   }
 
