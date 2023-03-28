@@ -8,7 +8,7 @@ import LoyaltyIcon from '@mui/icons-material/Loyalty';
 import StoreIcon from '@mui/icons-material/Store';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-
+import './Services.scss'
 function Services() {
 
     const icon1 = (props) => (
@@ -42,7 +42,7 @@ function Services() {
     )
 
     return (
-        <Container className='mt-5 mb-5'>
+        <Container className='mt-5 mb-5 bg-light pt-4' >
             <Row className="justify-content-md-center " style={{paddingLeft:'12%'}}>
 
 

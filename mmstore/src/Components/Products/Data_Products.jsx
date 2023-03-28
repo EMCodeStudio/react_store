@@ -24,7 +24,7 @@ export const dataProducts = [
     {
         id:3,
         image:"https://images.pexels.com/photos/39716/pexels-photo-39716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        title:"Gafas",
+        title:"Lentes",
         description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel magni quisquam, asperiores eius earum illum odio, delectus voluptas in impedit numquam unde quibusdam nemo eligendi nesciunt tempore perspiciatis dolore rerum?",
         price:"480.000"
     },

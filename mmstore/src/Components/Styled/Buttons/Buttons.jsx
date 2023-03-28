@@ -31,7 +31,11 @@ const ButtonProduct = styled(Button)`
     border: 2px solid var(--color-purple-lite);
     width: 100px;
     height: 40px;
-    padding-top: 4px;
+    padding-top: 5px;
+    .icon{
+        padding-top: 5px;
+     height: 22px;
+    }
 `;
 
 export { ButtonSearch, ButtonProduct };
