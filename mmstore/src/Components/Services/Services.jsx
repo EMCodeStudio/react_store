@@ -43,10 +43,10 @@ function Services() {
 
     return (
         <Container className='mt-5 mb-5'>
-            <Row className="justify-content-md-center">
+            <Row className="justify-content-md-center " style={{paddingLeft:'12%'}}>
 
 
-                <Col xs={{ offset: 1 }} className='mb-2 ml-2'>
+                <Col xs="6 " sm="3" className='mb-2 ml-2'>
                     <OverlayTrigger
                         id="icon1"
                         placement="right"
@@ -63,7 +63,7 @@ function Services() {
                 </Col>
 
 
-                <Col xs={{ offset: 1 }}  >
+                <Col  xs="6 " sm="3"  >
                     <OverlayTrigger
                         id="icon2"
                         placement="right"
@@ -81,7 +81,7 @@ function Services() {
 
 
 
-                <Col xs={{ offset: 1 }} >
+                <Col xs="6 " sm="3" >
                 <OverlayTrigger
                         id="icon3"
                         placement="right"
@@ -98,7 +98,7 @@ function Services() {
                 </Col>
 
 
-                <Col xs={{ offset: 1 }} >
+                <Col  xs="6 " sm="3" >
                 <OverlayTrigger
                         id="icon4"
                         placement="right"

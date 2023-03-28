@@ -15,7 +15,7 @@ function Header_Menu() {
         <div className="headerMenu">
             <Navbar className='navbarMenu' expand="lg">
                 <Container fluid>
-                    <Navbar.Brand className='text-white' href="#">MMStore</Navbar.Brand>
+                    <Navbar.Brand href="#">MMStore</Navbar.Brand>
                     <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
                     <Navbar.Offcanvas
                         id={`offcanvasNavbar-expand-lg`}
