@@ -12,12 +12,9 @@ import './Services.scss'
 function Services() {
 
     const icon1 = (props) => (
-
         <Tooltip id="icon1" {...props}>
             Pedidos por Whatsapp
         </Tooltip>
-
-
     )
     const icon2 = (props) => (
 
@@ -40,12 +37,9 @@ function Services() {
         </Tooltip>
 
     )
-
     return (
         <Container className='mt-5 mb-5 bg-light pt-4' >
             <Row className="justify-content-md-center " style={{paddingLeft:'12%'}}>
-
-
                 <Col xs="6 " sm="3" className='mb-2 ml-2'>
                     <OverlayTrigger
                         id="icon1"
@@ -61,8 +55,6 @@ function Services() {
                         <p><b>Pedidos</b></p>
                     </div>
                 </Col>
-
-
                 <Col  xs="6 " sm="3"  >
                     <OverlayTrigger
                         id="icon2"
@@ -78,9 +70,6 @@ function Services() {
                         <p><b>Envios</b></p>
                     </div>
                 </Col>
-
-
-
                 <Col xs="6 " sm="3" >
                 <OverlayTrigger
                         id="icon3"
@@ -96,8 +85,6 @@ function Services() {
                         <p><b>Ofertas</b></p>
                     </div>
                 </Col>
-
-
                 <Col  xs="6 " sm="3" >
                 <OverlayTrigger
                         id="icon4"
@@ -114,10 +101,8 @@ function Services() {
                     </div>
                 </Col>
             </Row>
-
         </Container>
     )
 
 }
-
 export default Services;

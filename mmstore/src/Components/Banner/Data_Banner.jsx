@@ -1,7 +1,4 @@
 
-
-
-
 export const dataBanner = [
     {
         id:1,

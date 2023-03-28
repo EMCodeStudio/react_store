@@ -8,7 +8,6 @@ import { TitleProduct } from '../Styled/Titles/Titles'
 
 const Products = () => {
   return (
-    <>
       <Container>
 
         <TitleProduct>
@@ -22,7 +21,6 @@ const Products = () => {
           }
         </Row>
       </Container>
-    </>
   )
 }
 
