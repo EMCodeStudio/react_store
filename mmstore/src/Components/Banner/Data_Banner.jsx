@@ -2,16 +2,16 @@
 export const dataBanner = [
     {
         id:1,
-        title:"Accesorios",
+        title:"Tecnologia",
         subtitle:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, autem minima.",
-        img:"https://images.pexels.com/photos/135620/pexels-photo-135620.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1",
+        img:"https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1",
        
     },
     {
         id:2,
-        title:"Tecnologia",
+        title:"Accesorios",
         subtitle:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, autem minima.",
-        img:"https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1",
+        img:"https://images.pexels.com/photos/14894160/pexels-photo-14894160.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1",
        
     },
     {
@@ -23,7 +23,7 @@ export const dataBanner = [
     },
     {
         id:4,
-        title:"Calzado",
+        title:"Calzado & Ropa",
         subtitle:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, autem minima.",
         img:"https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1",
        
@@ -33,6 +33,13 @@ export const dataBanner = [
         title:"Cuidado Personal",
         subtitle:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, autem minima.",
         img:"https://images.pexels.com/photos/4202329/pexels-photo-4202329.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1",
+       
+    },
+    {
+        id:5,
+        title:"Deporte & Fitness",
+        subtitle:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, autem minima.",
+        img:"https://images.pexels.com/photos/371049/pexels-photo-371049.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1",
        
     },
 ]

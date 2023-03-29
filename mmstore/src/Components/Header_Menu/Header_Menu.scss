@@ -5,26 +5,19 @@
     left: 0;
     top: 0;
     z-index: 1003;
-
-form{
-    margin-left: 10px;
-}
+    form {
+        margin-left: 10px;
+    }
     .navbarMenu {
         background-color: var(--color-bg);
     }
-   
-
     .linkMenu {
         font-weight: 500;
         &:hover {
-
             border-bottom: 3px solid var(--color-white);
-         
         }
     }
-
-
-    .navbar-toggler{
+    .navbar-toggler {
         border: none !important;
         padding: 2px 5px;
     }
@@ -34,7 +27,5 @@ form{
         box-shadow: none !important;
         background-color: var(--color-white);
         border-radius: 0 !important;
-       
     }
 }
-

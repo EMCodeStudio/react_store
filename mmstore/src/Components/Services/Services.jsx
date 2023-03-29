@@ -13,27 +13,27 @@ function Services() {
 
     const icon1 = (props) => (
         <Tooltip id="icon1" {...props}>
-            Pedidos por Whatsapp
+            Pedidos Por Whatsapp
         </Tooltip>
     )
     const icon2 = (props) => (
 
         <Tooltip id="icon2" {...props}>
-            Entregas Rapidas
+            Entrega Immediata
         </Tooltip>
 
     )
     const icon3 = (props) => (
 
         <Tooltip id="icon3" {...props}>
-            Ofertas Toda la semana
+            Ofertas Todos los Dias
         </Tooltip>
 
     )
     const icon4 = (props) => (
 
         <Tooltip id="icon4" {...props}>
-           Ventas al por Mayor
+           Ventas al Por Mayor
         </Tooltip>
 
     )
