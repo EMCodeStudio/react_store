@@ -31,7 +31,9 @@ function Card_Product({ data }) {
                         disabled={isLoading}
                         onClick={!isLoading ? handleClick : null}
                     >
+                        <p>       
                         {isLoading ? 'Cargan...' : 'Comprar'}
+                        </p>
                         <AddShoppingCartIcon className='icon' />
                     </ButtonProduct>
                 </Card.Body>

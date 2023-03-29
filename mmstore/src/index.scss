@@ -1,92 +1,100 @@
-@import "bootstrap/scss/bootstrap";
+ @import "bootstrap/scss/bootstrap";
 
-:root {
-
-  --color-gray: rgb(134, 134, 134);
-  --color-purple: #535bf2;
-  --color-purple-lite: #535bf2a1;
-  --color-purple-semi: #e0e1ff;
-  --color-purple-light: #747bff;
-  --color-white: #ffff font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --color-black-gradient: linear-gradient(rgba(0, 0, 0, 0.185), rgba(0, 0, 0, 0.199));
-  --color-bg: rgb(161, 194, 255);
-  --color-white: #ffff;
-  --shadow-box: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 16px 0 rgba(0, 0, 0, 0.10);
-  ;
-
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-
-  background-color: #242424;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-
-}
-
-a:hover {
-  color: var(--color-purple);
-}
-
-body {
-
-  margin-bottom: 0 !important;
-  background-image: url('bg/Sprinkle.svg');
-  padding-left: 12%;
-  padding-right: 12%;
-
-  @media (max-width: 820px) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  #headerBack {
-    @media (max-width: 992px) {
-      height: 55.5px;
-    }
-
-    position: fixed;
-    width: 100%;
-    height: 65.5px;
-    right: 0;
-    left: 0;
-    top: 0;
-    background-color: var(--color-bg);
-  }
-}
+/*  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 
 
+ @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+ * {
+   font-family: 'Poppins', sans-serif;
+ }
 
+ :root {
+
+   --color-gray: rgb(134, 134, 134);
+   --color-purple: #535bf2;
+   --color-purple-lite: #535bf2a1;
+   --color-purple-semi: #e0e1ff;
+   --color-purple-light: #747bff;
+   --color-white: #ffff font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+   --color-black-gradient: linear-gradient(rgba(0, 0, 0, 0.185), rgba(0, 0, 0, 0.199));
+   --color-bg: rgb(161, 194, 255);
+   --color-white: #ffff;
+   --shadow-box: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 16px 0 rgba(0, 0, 0, 0.10);
+   ;
+
+   line-height: 1.5;
+   font-weight: 400;
+
+   color-scheme: light dark;
+   color: rgba(255, 255, 255, 0.87);
+
+   background-color: #242424;
+   font-synthesis: none;
+   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+
+ a {
+   font-weight: 500;
+   color: #646cff;
+   text-decoration: inherit;
+
+ }
+
+ a:hover {
+   color: var(--color-purple);
+ }
+
+ body {
+
+   margin-bottom: 0 !important;
+   background-image: url('bg/Sprinkle.svg');
+   padding-left: 12%;
+   padding-right: 12%;
+
+   @media (max-width: 820px) {
+     padding-left: 0;
+     padding-right: 0;
+   }
 /* 
+   #headerBack {
+     @media (max-width: 992px) {
+       height: 55.5px;
+     }
+
+     position: fixed;
+     width: 100%;
+     height: 65.5px;
+     right: 0;
+     left: 0;
+     top: 0;
+     background-color: var(--color-bg);
+   } */
+ }
+
+
+
+ h1 {
+   font-size: 3.2em;
+   line-height: 1.1;
+ }
+
+ /* 
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
  */
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+ @media (prefers-color-scheme: light) {
+   :root {
+     background-color: #ffffff;
+   }
 
-  a:hover {
-    color: var(--color-purple-light);
-  }
+   a:hover {
+     color: var(--color-purple-light);
+   }
 
 
-}
+ }

@@ -1,4 +1,12 @@
 .cardProduct {
     min-height: '300px';
     box-shadow: var(--shadow-box);
+    border-radius: 0 !important;
+
+    .card-subtitle {
+        font-size: small;
+    }
+    .card-title {
+        font-size: medium;
+    }
 }
