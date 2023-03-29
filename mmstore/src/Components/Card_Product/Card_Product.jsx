@@ -24,7 +24,9 @@ function Card_Product({ data }) {
             <Card border="light" className='cardProduct'>
                 <Card.Img title='Image' style={{ minHeight: '180px' }} variant="top" src={data.image} />
                 <Card.Body>
-                    <Card.Title className="text-gray" >{data.title}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">$ {data.price}</Card.Subtitle>
+                    <Card.Title  >{data.title}</Card.Title>
+
                     <ButtonProduct
                         disabled={isLoading}
                         onClick={!isLoading ? handleClick : null}

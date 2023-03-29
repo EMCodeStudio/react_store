@@ -8,6 +8,7 @@ import SSRProvider from 'react-bootstrap/SSRProvider';
 ReactDOM.createRoot(document.getElementById('root')).render(
   
   <React.StrictMode>
+
     <Header_Menu />
 
     <SSRProvider>

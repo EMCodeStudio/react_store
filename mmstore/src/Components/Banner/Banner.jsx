@@ -17,7 +17,7 @@ function Banner() {
                             />
                             <Carousel.Caption>
                                 <div className="textBanner">
-                                    <h3 className='text-light'>{data.title}</h3>
+                                    <h3>{data.title}</h3>
                                     <p>{data.subtitle}</p>
                                 </div>
                             </Carousel.Caption>

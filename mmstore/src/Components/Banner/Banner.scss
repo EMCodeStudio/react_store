@@ -25,6 +25,14 @@
     z-index: 2 !important;
     position: absolute;
     bottom: 30px;
+    h3{
+      text-transform: uppercase; 
+    }
+
+    h3, p{
+      color: var(--color-white);
+      text-shadow: 2px 2px 14px var(--color-purple);
+    }
 
   }
 
