@@ -7,7 +7,7 @@ height: 50px;
 width: 50px;
 background-color: var(--color-purple);
 border-radius:50%;
-padding-top: 11px;
+padding-top: 13px;
 cursor: pointer;
 .icon{
 
