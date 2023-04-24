@@ -14,12 +14,12 @@ const Footer = () => {
                             <h5>About</h5>
                         </LiFooter>
                         <LiFooter >
-                            <p>asdasd</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolorem? Quam ab commodi soluta, doloremque nostrum inventore dolores nisi doloribus quod distinctio harum, aspernatur sed sit corrupti, quas veniam vitae.</p>
                         </LiFooter>
                     </ UlFooter>
                     <UlFooter>
                         <LiFooter >
-                            <h5>Servicos</h5>
+                            <h5>Servicios</h5>
                         </LiFooter>
                         <LiFooter >
                             <p>addsasd</p>
@@ -27,7 +27,7 @@ const Footer = () => {
                     </ UlFooter>
                     <UlFooter>
                         <LiFooter >
-                            <h5>About</h5>
+                            <h5>Enlaces</h5>
                         </LiFooter>
                         <LiFooter >
                             <p>asdasdasd</p>
@@ -35,7 +35,15 @@ const Footer = () => {
                     </ UlFooter>
                     <UlFooter>
                         <LiFooter >
-                            <h5>Soporte</h5>
+                            <h5>Categorias</h5>
+                        </LiFooter>
+                        <LiFooter >
+                            <p>vero maiores.</p>
+                        </LiFooter>
+                    </ UlFooter>
+                    <UlFooter>
+                        <LiFooter >
+                            <h5>Informacion</h5>
                         </LiFooter>
                         <LiFooter >
                             <p>asdasdasd</p>
