@@ -10,7 +10,6 @@ export const dataProducts = [
         offer: false,
         discount: 0
     },
-
     {
         id: 2,
         image: "https://images.pexels.com/photos/818043/pexels-photo-818043.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -21,32 +20,42 @@ export const dataProducts = [
         discount: 0
     },
     {
-        id: 3,
-        image: "https://images.pexels.com/photos/45056/pexels-photo-45056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        title: "Cuerda De Salto",
-        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel magni quisquam, asperiores eius earum illum odio, delectus voluptas in impedit numquam unde quibusdam nemo eligendi nesciunt tempore perspiciatis dolore rerum?",
-        price: "50.000",
-        offer: false,
-        discount: 0
-    },
-
-    {
         id: 4,
-        image: "https://images.pexels.com/photos/3910071/pexels-photo-3910071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        title: "Perfume",
+        image: "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        title: "Zapatillas",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel magni quisquam, asperiores eius earum illum odio, delectus voluptas in impedit numquam unde quibusdam nemo eligendi nesciunt tempore perspiciatis dolore rerum?",
-        price: "380.000",
-        offer: false,
-        discount: 0
-    },
-    {
-        id: 5,
-        image: "https://images.pexels.com/photos/39716/pexels-photo-39716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        title: "Lentes",
-        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel magni quisquam, asperiores eius earum illum odio, delectus voluptas in impedit numquam unde quibusdam nemo eligendi nesciunt tempore perspiciatis dolore rerum?",
-        price: "480.000",
+        price: "400.000",
         offer: false,
         discount: 0
     },
 
+    /*
+      {
+          id: 5,
+          image: "https://images.pexels.com/photos/45056/pexels-photo-45056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          title: "Cuerda De Salto",
+          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel magni quisquam, asperiores eius earum illum odio, delectus voluptas in impedit numquam unde quibusdam nemo eligendi nesciunt tempore perspiciatis dolore rerum?",
+          price: "50.000",
+          offer: false,
+          discount: 0
+      },
+      {
+          id: 6,
+          image: "https://images.pexels.com/photos/3910071/pexels-photo-3910071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          title: "Perfume",
+          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel magni quisquam, asperiores eius earum illum odio, delectus voluptas in impedit numquam unde quibusdam nemo eligendi nesciunt tempore perspiciatis dolore rerum?",
+          price: "380.000",
+          offer: false,
+          discount: 0
+      },  
+      {
+          id: 7,
+          image: "https://images.pexels.com/photos/39716/pexels-photo-39716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          title: "Lentes",
+          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel magni quisquam, asperiores eius earum illum odio, delectus voluptas in impedit numquam unde quibusdam nemo eligendi nesciunt tempore perspiciatis dolore rerum?",
+          price: "480.000",
+          offer: false,
+          discount: 0
+      }, 
+    */
 ]
