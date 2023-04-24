@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className="listFooter">
                     <UlFooter>
                         <LiFooter >
-                            <h5>About</h5>
+                            <h5>Quienes Somos?</h5>
                         </LiFooter>
                         <LiFooter >
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolorem? Quam ab commodi soluta, doloremque nostrum inventore dolores nisi doloribus quod distinctio harum, aspernatur sed sit corrupti, quas veniam vitae.</p>
@@ -19,7 +19,7 @@ const Footer = () => {
                     </ UlFooter>
                     <UlFooter>
                         <LiFooter >
-                            <h5>Servicios</h5>
+                            <h5>Informacion</h5>
                         </LiFooter>
                         <LiFooter >
                             <p>addsasd</p>
@@ -43,7 +43,7 @@ const Footer = () => {
                     </ UlFooter>
                     <UlFooter>
                         <LiFooter >
-                            <h5>Informacion</h5>
+                            <h5>Contacto</h5>
                         </LiFooter>
                         <LiFooter >
                             <p>asdasdasd</p>
