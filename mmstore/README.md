@@ -18,5 +18,6 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 - yarn add @mui/icons-material
+- yarn add axios
 
 
