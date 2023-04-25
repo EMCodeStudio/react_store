@@ -15,7 +15,7 @@ const updateHeader = request => {
 // Add a request interceptor
 axios.interceptors.request.use((request) => {
     // Do something before request is sent
-    if (request.url?.includes('assets'))
+   /*  if (request.url?.includes('assets')) */
     return request
     console.log('RESPUESTA REQUEST: ' + request)
     return updateHeader(request)

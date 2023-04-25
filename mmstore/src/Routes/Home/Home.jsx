@@ -5,15 +5,11 @@ import ServicesHome from '../../Components/Services_Home/Services_Home'
 import './Home.scss'
 const Home = () => {
   return (
-    <>
-     
      <div className="containerHome">
         <Banner/>
         <ServicesHome />
         <ProductStore/>
      </div>
-     
-    </>
   )
 }
 

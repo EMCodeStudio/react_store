@@ -26,7 +26,7 @@ const ProductStore = () => {
     }
   }, [])
 
-  console.log('DATA PRODUCTS: ' + product)
+  console.log('DATA PRODUCTS: ' + product.id)
 
   return (
     <Container>
@@ -36,8 +36,10 @@ const ProductStore = () => {
       <Row >
         {
           product.map((d, i) => {
+
+            
             return(
-              <Card_Product data={d} key={d.id} />
+              <Card_Product dataP={d} key={d.id} />
             )
            
           })
