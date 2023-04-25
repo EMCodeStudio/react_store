@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row'
 /* import { dataProducts } from './Data_Products' */
 import './Products.scss'
 import { TitleProduct } from '../Styled/Titles/Titles'
-import { servicesProducts } from '../../Services/Products_Services/Services_Products'
+import { servicesProducts } from '../../Services_Axios/Products_Services/Services_Products'
 
 const Products = () => {
 
@@ -18,7 +18,6 @@ const Products = () => {
   }
 
   useEffect(()=>{
-
     try {
       fetchData()
     } catch (error) {

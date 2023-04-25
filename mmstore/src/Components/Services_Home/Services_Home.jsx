@@ -8,7 +8,7 @@ import LoyaltyIcon from '@mui/icons-material/Loyalty';
 import StoreIcon from '@mui/icons-material/Store';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-import './Services.scss'
+import './Services_Home.scss'
 function Services() {
 
     const icon1 = (props) => (
