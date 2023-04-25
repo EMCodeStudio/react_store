@@ -9,7 +9,7 @@ import StoreIcon from '@mui/icons-material/Store';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 import './Services_Home.scss'
-function Services() {
+function ServicesHome() {
 
     const icon1 = (props) => (
         <Tooltip id="icon1" {...props}>
@@ -105,4 +105,4 @@ function Services() {
     )
 
 }
-export default Services;
+export default ServicesHome;

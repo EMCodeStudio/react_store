@@ -6,7 +6,7 @@ import './Products_Store.scss'
 import { TitleProduct } from '../Styled/Titles/Titles'
 import { servicesProducts } from '../../Services_Axios/Products_Services/Services_Products'
 
-const Products = () => {
+const ProductStore = () => {
 
   const [productsData, setProductsData] = useState([])
 
@@ -39,4 +39,4 @@ const Products = () => {
   )
 }
 
-export default Products
+export default ProductStore
