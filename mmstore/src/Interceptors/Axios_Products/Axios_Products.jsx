@@ -1,8 +1,12 @@
 
 import axios from 'axios'
-import { getValidationErrors } from '../../Components/Utilities/Get_Validation_Errors'
+import { getValidationErrors } from '../../Utilities/Get_Validation_Errors';
 
-const updateHeader = request => {
+
+export const axiosProducts = () => {
+
+
+const updateHeaders = request => {
     const token = ''
     const newHeader = {
         Authorization: token,
@@ -17,8 +21,8 @@ axios.interceptors.request.use((request) => {
     // Do something before request is sent
    /*  if (request.url?.includes('assets')) */
     return request
-    console.log('RESPUESTA REQUEST: ' + request)
-    return updateHeader(request)
+    return updateHeaders(request)
+
 }, (error) => {
     // Do something with request error
     console.log('ERROR REQUEST:', getValidationErrors(error.code))
@@ -38,3 +42,4 @@ axios.interceptors.response.use((response) => {
     console.log('ERROR RESPONSE: ', getValidationErrors(error.code))
     return Promise.reject(error);
 });
+}
