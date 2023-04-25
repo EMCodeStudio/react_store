@@ -1,4 +1,4 @@
-
+/* 
 export const dataProducts = [
     {
         id: 1,
@@ -37,3 +37,4 @@ export const dataProducts = [
         discount: 0
     },
 ]
+ */
