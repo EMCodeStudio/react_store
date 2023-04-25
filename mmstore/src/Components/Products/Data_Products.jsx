@@ -1,6 +1,5 @@
 
 export const dataProducts = [
-
     {
         id: 1,
         image: "https://images.pexels.com/photos/267301/pexels-photo-267301.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -37,25 +36,4 @@ export const dataProducts = [
         offer: false,
         discount: 0
     },
-    /*
-     
-      {
-          id: 6,
-          image: "https://images.pexels.com/photos/3910071/pexels-photo-3910071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          title: "Perfume",
-          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel magni quisquam, asperiores eius earum illum odio, delectus voluptas in impedit numquam unde quibusdam nemo eligendi nesciunt tempore perspiciatis dolore rerum?",
-          price: "380.000",
-          offer: false,
-          discount: 0
-      },  
-      {
-          id: 7,
-          image: "https://images.pexels.com/photos/39716/pexels-photo-39716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          title: "Lentes",
-          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel magni quisquam, asperiores eius earum illum odio, delectus voluptas in impedit numquam unde quibusdam nemo eligendi nesciunt tempore perspiciatis dolore rerum?",
-          price: "480.000",
-          offer: false,
-          discount: 0
-      }, 
-    */
 ]

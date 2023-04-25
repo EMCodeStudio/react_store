@@ -1,4 +1,4 @@
-/* import Button from 'react-bootstrap/Button'; */
+
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
@@ -19,6 +19,7 @@ function Card_Product({ data }) {
         }
     }, [isLoading]);
     const handleClick = () => setLoading(true);
+
     return (
         <Col xs='12' sm='8' md='6' lg='4' xl='3' className='mb-5 center'>
             <Card border="light" className='cardProduct'>
