@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 function simulateNetworkRequest() {
     return new Promise((resolve) => setTimeout(resolve, 2000));
 }
-function Card_Product({ dataP }) {
+function Card_Product({ data }) {
     const [isLoading, setLoading] = useState(false);
     useEffect(() => {
         if (isLoading) {
@@ -23,10 +23,10 @@ function Card_Product({ dataP }) {
     return (
         <Col xs='12' sm='8' md='6' lg='4' xl='3' className='mb-5 center'>
             <Card border="light" className='cardProduct'>
-                <Card.Img title='Image' style={{ minHeight: '180px' }} variant="top" src={dataP.image} />
+                <Card.Img title='Image' style={{ minHeight: '180px' }} variant="top" src={data.image} />
                 <Card.Body>
-                    <Card.Subtitle className="mb-2 text-muted">$ {dataP.price}</Card.Subtitle>
-                    <Card.Title  >{dataP.title}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">$ {data.price}</Card.Subtitle>
+                    <Card.Title  >{data.title}</Card.Title>
 
                     <ButtonProduct
                         disabled={isLoading}

@@ -1,27 +1,32 @@
+
 import React, { useEffect, useState } from 'react'
 import Card_Product from '../Card_Product/Card_Product'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import './Products_Store.scss'
 import { TitleProduct } from '../Styled/Titles/Titles'
-import { servicesProducts } from '../../Services_Axios/Products_Services/Services_Products'
+import { servicesProduct } from '../../Services_Axios/Products_Services/Services_Products'
+
+
 
 const ProductStore = () => {
 
-  const [productsData, setProductsData] = useState([])
+  const [product, setProduct] = useState([])
 
   const fetchData = async () => {
-    const { dataProductsFetch } = await servicesProducts()
-    setProductsData(dataProductsFetch)
+    const { data } = await servicesProduct()
+    setProduct(data)
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     try {
       fetchData()
     } catch (error) {
       console.log('ERROR FETCH DATA:' + error)
     }
-  },[])
+  }, [])
+
+  console.log('DATA PRODUCTS: ' + product)
 
   return (
     <Container>
@@ -30,9 +35,12 @@ const ProductStore = () => {
       </TitleProduct>
       <Row >
         {
-          productsData.map((data) => (
-            <Card_Product key={data.id} dataP={data} />
-          ))
+          product.map((d, i) => {
+            return(
+              <Card_Product data={d} key={d.id} />
+            )
+           
+          })
         }
       </Row>
     </Container>

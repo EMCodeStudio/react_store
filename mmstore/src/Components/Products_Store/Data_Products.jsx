@@ -36,5 +36,4 @@ export const dataProducts = [
         offer: false,
         discount: 0
     },
-]
- */
+] */
