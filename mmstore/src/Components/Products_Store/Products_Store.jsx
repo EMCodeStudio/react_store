@@ -7,17 +7,13 @@ import './Products_Store.scss'
 import { TitleProduct } from '../Styled/Titles/Titles'
 import { servicesProduct } from '../../Services_Axios/Products_Services/Services_Products'
 
-
-
 const ProductStore = () => {
 
   const [product, setProduct] = useState([])
-
   const fetchData = async () => {
     const { data } = await servicesProduct()
     setProduct(data)
   }
-
   useEffect(() => {
     try {
       fetchData()
@@ -25,7 +21,6 @@ const ProductStore = () => {
       console.log('ERROR FETCH DATA:' + error)
     }
   }, [])
-
   console.log('DATA PRODUCTS: ' + product.id)
 
   return (
@@ -36,12 +31,10 @@ const ProductStore = () => {
       <Row >
         {
           product.map((d, i) => {
-
-            
+            console.log('REPETICION ID: '+ d.id)
             return(
               <Card_Product dataP={d} key={d.id} />
             )
-           
           })
         }
       </Row>
