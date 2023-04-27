@@ -8,14 +8,12 @@ import Footer from './Components/Footer/Footer'
 
 
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
-/*  
-  <React.StrictMode> */
-    <SSRProvider>
-      <Header_Menu />
+  <SSRProvider>
+    <Header_Menu />
+   
       <App />
-      <Footer />
-    </SSRProvider>
-/*  </React.StrictMode> */
+
+    <Footer />
+  </SSRProvider>
 )
