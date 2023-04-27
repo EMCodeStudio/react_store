@@ -33,7 +33,7 @@ function Header_Menu() {
                                         <Link to={'/'}>INICIO</Link>
                                     </Nav>
                                     <Nav href="#action2" className='linkMenu'>
-                                        <Link to={'/category'}>OFERTAS</Link>
+                                        <Link  to={'/category'}>OFERTAS</Link>
                                     </Nav>
                                     <NavDropdown className=' linkMenu' title="CATEGORIAS" id={`offcanvasNavbarDropdown-expand-lg`}>
                                         <NavDropdown.Item href="#action3">
