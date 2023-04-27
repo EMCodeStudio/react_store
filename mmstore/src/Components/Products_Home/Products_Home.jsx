@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import './Products_Store.scss'
 import { TitleProduct } from '../Styled/Titles/Titles'
-
+import { ServicesProducts } from '../../Axios_Services/Services_Products/Services_Products'
 
 const ProductsHome = () => {
 
@@ -32,15 +32,13 @@ const ProductsHome = () => {
       ) : (
         <Row >
           {
-            products.map((pd, i) => {
-              console.log('id:', pd.id)
+            products.map((dataProducts, i) => {
               return (
                 i <= count ?
-                  <Card_Product key={pd.id} dataP={pd} index={i} />
+                  <Card_Product key={dataProducts.id} dataP={dataProducts} index={i} />
                   :
                   ''
               )
-
             })
           }
         </Row>

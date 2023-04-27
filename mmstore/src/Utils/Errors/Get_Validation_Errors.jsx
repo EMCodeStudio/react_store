@@ -1,7 +1,7 @@
 export const getValidationError = errorCode => {
     const configCodeMatcher = {
-      ERR_NETWORK: "Error en la Red!",
-      ERR_BAD_REQUEST: "Error de Login!"
+      ERR_NETWORK: "ERROR DE CONEXION A LA RED!",
+      ERR_BAD_REQUEST: "ERROR DE AUTENTICACION!"
     }
     return configCodeMatcher[errorCode]
   }
