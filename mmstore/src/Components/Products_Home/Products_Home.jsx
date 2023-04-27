@@ -18,6 +18,7 @@ const ProductsHome = () => {
     setProducts(result.data)
     setLoading(false)
   }
+  
   useEffect(() => {
     fetchProducts()
   }, [])

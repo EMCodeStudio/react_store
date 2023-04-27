@@ -10,7 +10,23 @@ import { InputSearch } from '../Styled/Inputs/Inputs';
 import './Header_Menu.scss'
 import SearchIcon from '@mui/icons-material/Search';
 import { Link } from 'react-router-dom'
+import { servicesCategories } from '../../Axios_Services/Services_Categories/Services_Categories';
+import { useEffect, useState } from 'react';
 function Header_Menu() {
+
+    const [categories, setCategories] = useState()
+
+    const fetchCategories = async () => {
+        const result = await servicesCategories()
+        setCategories(result.data)
+    }
+    useEffect(() => {
+        fetchCategories()
+        return () => {
+
+        }
+    }, [])
+
     return (
         <>
             <div className="headerMenu">
@@ -33,31 +49,22 @@ function Header_Menu() {
                                         <Link to={'/'}>INICIO</Link>
                                     </Nav>
                                     <Nav href="#action2" className='linkMenu'>
-                                        <Link  to={'/category'}>OFERTAS</Link>
+                                        <Link to={'/category'}>OFERTAS</Link>
                                     </Nav>
+                                    
                                     <NavDropdown className=' linkMenu' title="CATEGORIAS" id={`offcanvasNavbarDropdown-expand-lg`}>
-                                        <NavDropdown.Item href="#action3">
-                                            Ropa
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Item href="#action3">
-                                            Calzado
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Item href="#action4">
-                                            Tecnologia
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Divider />
-                                        <NavDropdown.Item href="#action5">
-                                            Accesorios
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Item href="#action5">
-                                            Cuidado Personal
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Item href="#action5">
-                                            Deporte & Fitness
-                                        </NavDropdown.Item>
+                                        {
+                                            categories.map((dataCategories) => {
+                                                return (
+                                                    <NavDropdown.Item >
+                                                        {dataCategories}
+                                                    </NavDropdown.Item>
+                                                )
+                                            })
+                                        }
+
                                     </NavDropdown>
                                 </Nav>
-
                                 <Form className="d-flex ">
                                     <InputSearch />
                                     <ButtonSearch primaryColor><SearchIcon /></ButtonSearch>

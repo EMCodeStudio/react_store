@@ -1,7 +1,6 @@
+
 import axios from 'axios';
 import { getValidationError } from '../../Utils/Errors/Get_Validation_Errors'; 
-
-
 
 export const axiosProducts = () => {
 
@@ -14,6 +13,7 @@ export const axiosProducts = () => {
         request.headers = newHeader
         return request
     }
+    
     axios.interceptors.request.use((request) => {
         if (request.url?.includes("assets"))
         return request
