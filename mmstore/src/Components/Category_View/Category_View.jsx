@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Category = () => {
+const CategoryView = () => {
   return (
 
 
@@ -10,4 +10,4 @@ const Category = () => {
   )
 }
 
-export default Category
+export default CategoryView

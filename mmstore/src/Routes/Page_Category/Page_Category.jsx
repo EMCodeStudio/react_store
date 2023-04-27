@@ -1,11 +1,10 @@
 import React from 'react'
-import Category from '../../Components/Category/Category'
+import CategoryView from '../../Components/Category_View/Category_View'
 
 const PageCategory = () => {
     return (
-
         <>
-          <Category/>
+          <CategoryView/>
         </>
     )
 }
