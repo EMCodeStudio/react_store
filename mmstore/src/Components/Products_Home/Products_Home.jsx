@@ -5,23 +5,21 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import './Products_Store.scss'
 import { TitleProduct } from '../Styled/Titles/Titles'
-import axios from 'axios'
 
-const ProductStore = () => {
+
+const ProductsHome = () => {
 
   const [products, setProducts] = useState([])
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true)
   const [count, setCount] = useState(3)
 
-  const fetchData = async () => {
-    const result = await axios(
-      'https://fakestoreapi.com/products'
-    );
+  const fetchProducts = async () => {
+    const result = await ServicesProducts()
     setProducts(result.data)
     setLoading(false)
   }
   useEffect(() => {
-    fetchData()
+    fetchProducts()
   }, [])
 
   return (
@@ -51,4 +49,4 @@ const ProductStore = () => {
   )
 }
 
-export default ProductStore
+export default ProductsHome
