@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import './Products_Store.scss'
 import { TitleProduct } from '../Styled/Titles/Titles'
-import { servicesProduct } from '../../Services_Axios/Products_Services/Services_Products'
+import axios from 'axios'
 
 const ProductStore = () => {
 
@@ -16,16 +16,13 @@ const ProductStore = () => {
     const result = await axios(
       'https://fakestoreapi.com/products'
     );
-    setProducts(result);
+    setProducts(result.data)
+    setLoading(false)
   }
 
   useEffect(() => {
-    if (!products.length) {
-      fetchData()
-      setLoading(false)
-    }
-  }, [products]);
-
+    fetchData()
+  }, [])
 
   return (
     <Container>

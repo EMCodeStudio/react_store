@@ -6,7 +6,7 @@ import './Home.scss'
 const Home = () => {
   return (
      <div className="containerHome">
-        <Banner/>
+      {/*   <Banner/> */}
         <ServicesHome />
         <ProductStore/>
      </div>
