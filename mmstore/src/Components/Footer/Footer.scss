@@ -1,6 +1,7 @@
 .footer {
-   
+
     background-color: var(--color-purple-semi);
+    width: 100%;
 
     .listFooter {
         grid-area: 15px;
@@ -12,6 +13,7 @@
         align-items: center; */
         width: 100%;
     }
+
     .bottom {
         margin-bottom: 0;
         width: 100%;

@@ -1,45 +1,46 @@
 
 import './App.scss'
-import Category from './Components/Category/Category';
+import Footer from './Components/Footer/Footer';
+import Header_Menu from './Components/Header_Menu/Header_Menu';
+import ErrorPage from './Routes/Error_Page/Error_Page';
 import Home from './Routes/Home/Home'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+import PageCategory from './Routes/Page_Category/Page_Category';
+
+function Layout() {
+  return (
+    <div>
+      <Header_Menu />
+      <Outlet />
+      <Footer />
+    </div>
+  )
+}
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/category",
+        element: <PageCategory />,
+        errorElement: <ErrorPage />,
+      },
+    ]
+  }
+])
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />,
-      errorElement: <ErrorPage />,
-      children: [
-        {
-          path: "/post-view/:id",
-          element: <PostView />,
-        },
-      ],
-    },
-
-    {
-      path: "/category",
-      element: <Category />,
-      errorElement: <ErrorPage />,
-    },
-    /* 
-  {
-    path: "/contact",
-    element: <Contact />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/fqa",
-    element: < FQA />,
-    errorElement: <ErrorPage />,
-  }, */
-
-  ]);
-
   return (
-    <div className="app">
-      < RouterProvider router={router} />
+    <div className='app'>
+      <RouterProvider router={router} />
     </div>
   )
 }
