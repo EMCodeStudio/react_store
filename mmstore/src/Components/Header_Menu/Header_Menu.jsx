@@ -1,19 +1,19 @@
-/* import Button from 'react-bootstrap/Button'; */
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import { ButtonSearch } from '../Styled/Buttons/Buttons';
-import { InputSearch } from '../Styled/Inputs/Inputs';
-import './Header_Menu.scss'
-import SearchIcon from '@mui/icons-material/Search';
-import { Link } from 'react-router-dom'
-import { servicesCategories } from '../../Axios_Services/Services_Categories/Services_Categories';
-import { useEffect, useState } from 'react';
-function Header_Menu() {
 
+import Container from 'react-bootstrap/Container'
+import Form from 'react-bootstrap/Form'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import NavDropdown from 'react-bootstrap/NavDropdown'
+import Offcanvas from 'react-bootstrap/Offcanvas'
+import { ButtonSearch } from '../Styled/Buttons/Buttons'
+import { InputSearch } from '../Styled/Inputs/Inputs'
+import './Header_Menu.scss'
+import SearchIcon from '@mui/icons-material/Search'
+import { Link } from 'react-router-dom'
+import { servicesCategories } from '../../Axios_Services/Services_Categories/Services_Categories'
+import { useEffect, useState } from 'react'
+
+function Header_Menu() {
     const [categories, setCategories] = useState()
 
     const fetchCategories = async () => {
@@ -22,9 +22,6 @@ function Header_Menu() {
     }
     useEffect(() => {
         fetchCategories()
-        return () => {
-
-        }
     }, [])
 
     return (
@@ -54,9 +51,9 @@ function Header_Menu() {
                                     
                                     <NavDropdown className=' linkMenu' title="CATEGORIAS" id={`offcanvasNavbarDropdown-expand-lg`}>
                                         {
-                                            categories.map((dataCategories) => {
+                                            categories.map((dataCategories, index) => {
                                                 return (
-                                                    <NavDropdown.Item >
+                                                    <NavDropdown.Item  key={index}>
                                                         {dataCategories}
                                                     </NavDropdown.Item>
                                                 )
@@ -75,6 +72,6 @@ function Header_Menu() {
                 </Navbar>
             </div>
         </>
-    );
+    )
 }
-export default Header_Menu;
+export default Header_Menu
