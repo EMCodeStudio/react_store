@@ -11,6 +11,7 @@ const ProductStore = () => {
 
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true);
+  const [count, setCount] = useState(3)
 
   const fetchData = async () => {
     const result = await axios(
@@ -19,7 +20,6 @@ const ProductStore = () => {
     setProducts(result.data)
     setLoading(false)
   }
-
   useEffect(() => {
     fetchData()
   }, [])
@@ -30,15 +30,19 @@ const ProductStore = () => {
         <h2 >Produtos Recientes</h2>
       </TitleProduct>
       {loading ? (
-        <p>Loading...</p>
+        <p>Cargando Productos...</p>
       ) : (
         <Row >
           {
-            products.map((productData, i) => {
-              console.log('id:', productData.id)
+            products.map((pd, i) => {
+              console.log('id:', pd.id)
               return (
-                <Card_Product key={productData.id} dataP={productData} index={i} />
+                i <= count ?
+                  <Card_Product key={pd.id} dataP={pd} index={i} />
+                  :
+                  ''
               )
+
             })
           }
         </Row>

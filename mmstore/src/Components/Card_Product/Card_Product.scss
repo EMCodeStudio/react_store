@@ -1,7 +1,9 @@
 .cardProduct {
-    min-height: '300px';
+    height: 450px !important;
+    
     box-shadow: var(--shadow-box);
     border-radius: 0 !important;
+padding: 10px;
 
     .card-subtitle {
         font-size: small;
