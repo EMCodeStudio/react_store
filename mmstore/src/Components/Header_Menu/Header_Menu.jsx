@@ -9,6 +9,7 @@ import { ButtonSearch } from '../Styled/Buttons/Buttons';
 import { InputSearch } from '../Styled/Inputs/Inputs';
 import './Header_Menu.scss'
 import SearchIcon from '@mui/icons-material/Search';
+import { Link } from 'react-router-dom'
 function Header_Menu() {
     return (
         <>
@@ -29,10 +30,10 @@ function Header_Menu() {
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 "  >
                                 <Nav.Link href="#action1" className='linkMenu'>
-                                    INICIO
+                                <Link to={'/'}>INICIO</Link>
                                 </Nav.Link>
                                 <Nav.Link href="#action2" className='linkMenu'>
-                                    OFERTAS
+                                <Link to={'/category'}>OFERTAS</Link>
                                 </Nav.Link>
                                 <NavDropdown className=' linkMenu' title="CATEGORIAS" id={`offcanvasNavbarDropdown-expand-lg`}>
                                     <NavDropdown.Item href="#action3">

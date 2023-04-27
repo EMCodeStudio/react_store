@@ -6,12 +6,11 @@ import './Home.scss'
 
 const Home = () => {
   return (
-     <div className="containerHome">
-      {/*   <Banner/> */}
-        <ServicesHome />
-        <ProductStore/>
-
-     </div>
+    <div className="containerHome">
+      <Banner />
+      <ServicesHome />
+      <ProductStore />
+    </div>
   )
 }
 
