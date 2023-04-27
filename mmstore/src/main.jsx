@@ -5,9 +5,9 @@ import Header_Menu from './Components/Header_Menu/Header_Menu'
 import './index.scss'
 import SSRProvider from 'react-bootstrap/SSRProvider';
 import Footer from './Components/Footer/Footer'
-import { axiosProducts } from './Interceptors/Axios_Products/Axios_Products'
 
-axiosProducts()
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
  

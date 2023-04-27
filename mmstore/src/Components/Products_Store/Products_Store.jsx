@@ -9,35 +9,43 @@ import { servicesProduct } from '../../Services_Axios/Products_Services/Services
 
 const ProductStore = () => {
 
-  const [product, setProduct] = useState([])
+  const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true);
+
   const fetchData = async () => {
-    const { data } = await servicesProduct()
-    setProduct(data)
+    const result = await axios(
+      'https://fakestoreapi.com/products'
+    );
+    setProducts(result);
   }
+
   useEffect(() => {
-    try {
+    if (!products.length) {
       fetchData()
-    } catch (error) {
-      console.log('ERROR FETCH DATA:' + error)
+      setLoading(false)
     }
-  }, [])
-  console.log('DATA PRODUCTS: ' + product.id)
+  }, [products]);
+
 
   return (
     <Container>
       <TitleProduct>
         <h2 >Produtos Recientes</h2>
       </TitleProduct>
-      <Row >
-        {
-          product.map((d, i) => {
-            console.log('REPETICION ID: '+ d.id)
-            return(
-              <Card_Product dataP={d} key={d.id} />
-            )
-          })
-        }
-      </Row>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <Row >
+          {
+            products.map((productData, i) => {
+              console.log('id:', productData.id)
+              return (
+                <Card_Product key={productData.id} dataP={productData} index={i} />
+              )
+            })
+          }
+        </Row>
+      )}
     </Container>
   )
 }
