@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react'
-import Card_Product from '../Card_Product/Card_Product'
+import CardProduct from '../Card_Product/Card_Product'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import './Products_Store.scss'
@@ -36,7 +36,7 @@ const ProductsHome = () => {
             products.map((dataProducts, i) => {
               return (
                 i <= count ?
-                  <Card_Product key={dataProducts.id} dataP={dataProducts} index={i} />
+                  <CardProduct key={dataProducts.id} dataP={dataProducts} index={i} />
                   :
                   ''
               )

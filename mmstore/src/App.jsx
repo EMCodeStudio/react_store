@@ -6,6 +6,7 @@ import ErrorPage from './Routes/Error_Page/Error_Page';
 import Home from './Routes/Home/Home'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import PageProduct from './Routes/Page_Product/Page_Product';
+import PageCategory from './Routes/Page_Category/Page_Category';
 
 function Layout() {
   return (
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
       {
         path: "/product/:id",
         element: <PageProduct />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/category/:id",
+        element: <PageCategory />,
         errorElement: <ErrorPage />,
       },
     ]

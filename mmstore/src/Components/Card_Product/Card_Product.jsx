@@ -12,14 +12,14 @@ import { useNavigate } from "react-router-dom";
 /* function simulateNetworkRequest() {
     return new Promise((resolve) => setTimeout(resolve, 2000))
 } */
-function Card_Product({ dataP }) {
+function CardProduct({ dataP }) {
 
     /*     const [isLoading, setLoading] = useState(false) */
     const navigate = useNavigate();
 
-    const handleClick = (id) => {
+    const handleClickProduct = (id) => {
         // Navegar a la ruta del componente2 y pasar el id como parámetro en la URL
-       navigate(`/product/${id}`);
+       navigate(`/product/${id}`)
     };
 
 
@@ -31,10 +31,10 @@ function Card_Product({ dataP }) {
           }
       }, [isLoading])
    */
-    /*   const handleClick = () => setLoading(true) */
+    /*   const handleClickProduct = () => setLoading(true) */
 
 /* disabled={isLoading} 
-                            onClick={!isLoading ? handleClick(dataP.id) : null}> */
+                            onClick={!isLoading ? handleClickProduct(dataP.id) : null}> */
 
     return (
         <>
@@ -50,7 +50,7 @@ function Card_Product({ dataP }) {
 
                             
 
-                            onClick={() => handleClick(dataP.id)}>
+                            onClick={() => handleClickProduct(dataP.id)}>
                             {/*   <p>
                                 {isLoading ? 'Cargan...' : 'Comprar'}
                             </p> */}
@@ -63,4 +63,4 @@ function Card_Product({ dataP }) {
         </>
     )
 }
-export default Card_Product
+export default CardProduct

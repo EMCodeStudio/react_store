@@ -9,12 +9,19 @@ import { ButtonSearch } from '../Styled/Buttons/Buttons'
 import { InputSearch } from '../Styled/Inputs/Inputs'
 import './Header_Menu.scss'
 import SearchIcon from '@mui/icons-material/Search'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { servicesCategories } from '../../Axios_Services/Services_Categories/Services_Categories'
 import { useEffect, useState } from 'react'
 
 function Header_Menu() {
     const [categories, setCategories] = useState([])
+
+    const navigateCategory = useNavigate()
+
+    const handleClickCategory = (categoryName) => {
+        navigateCategory('/category/'.$(categoryName))
+    }
+
 
     const fetchCategories = async () => {
         const result = await servicesCategories()
@@ -23,7 +30,7 @@ function Header_Menu() {
     useEffect(() => {
         fetchCategories()
     }, [])
-   
+
     return (
         <>
             <div className="headerMenu">
@@ -50,16 +57,18 @@ function Header_Menu() {
                                     </Nav>
 
                                     <NavDropdown className=' linkMenu' title="CATEGORIAS" id={`offcanvasNavbarDropdown-expand-lg`}>
-                                       {
+                                        {
                                             categories.map((dataCategories, index) => {
                                                 return (
-                                                    <NavDropdown.Item  key={index}>
+                                                    <NavDropdown.Item key={index}
+                                                        onClick={() =>
+                                                            handleClickCategory(dataCategories)} >
                                                         {dataCategories}
                                                     </NavDropdown.Item>
                                                 )
                                             })
                                         }
- 
+
                                     </NavDropdown>
                                 </Nav>
                                 <Form className="d-flex ">
