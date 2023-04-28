@@ -14,7 +14,7 @@ import { servicesCategories } from '../../Axios_Services/Services_Categories/Ser
 import { useEffect, useState } from 'react'
 
 function Header_Menu() {
-    const [categories, setCategories] = useState()
+    const [categories, setCategories] = useState([])
 
     const fetchCategories = async () => {
         const result = await servicesCategories()
@@ -23,7 +23,7 @@ function Header_Menu() {
     useEffect(() => {
         fetchCategories()
     }, [])
-
+   
     return (
         <>
             <div className="headerMenu">
@@ -48,9 +48,9 @@ function Header_Menu() {
                                     <Nav href="#action2" className='linkMenu'>
                                         <Link to={'/category'}>OFERTAS</Link>
                                     </Nav>
-                                    
+
                                     <NavDropdown className=' linkMenu' title="CATEGORIAS" id={`offcanvasNavbarDropdown-expand-lg`}>
-                                        {
+                                       {
                                             categories.map((dataCategories, index) => {
                                                 return (
                                                     <NavDropdown.Item  key={index}>
@@ -59,7 +59,7 @@ function Header_Menu() {
                                                 )
                                             })
                                         }
-
+ 
                                     </NavDropdown>
                                 </Nav>
                                 <Form className="d-flex ">

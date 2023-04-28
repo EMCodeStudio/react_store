@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import './Products_Store.scss'
 import { TitleProduct } from '../Styled/Titles/Titles'
-import { ServicesProducts } from '../../Axios_Services/Services_Products/Services_Products'
+import { servicesProducts } from '../../Axios_Services/Services_Products/Services_Products'
 
 const ProductsHome = () => {
 
@@ -14,7 +14,7 @@ const ProductsHome = () => {
   const [count, setCount] = useState(3)
 
   const fetchProducts = async () => {
-    const result = await ServicesProducts()
+    const result = await servicesProducts()
     setProducts(result.data)
     setLoading(false)
   }

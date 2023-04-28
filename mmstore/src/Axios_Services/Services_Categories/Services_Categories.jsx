@@ -2,5 +2,5 @@
 import axios from 'axios'
 
 export const servicesCategories = () =>{
-    return axios.get('http://fakestoreapi.com/products/categories')
+    return axios.get('https://fakestoreapi.com/products/categories')
 }
