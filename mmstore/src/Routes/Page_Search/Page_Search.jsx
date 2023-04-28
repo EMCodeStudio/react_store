@@ -1,7 +1,7 @@
 import React from 'react'
 import SearchView from '../../Components/Search_View/Search_View'
 
-const PageSearch = () => {
+const Page_Search = () => {
   return (
     <>
     <SearchView/>
@@ -9,4 +9,4 @@ const PageSearch = () => {
   )
 }
 
-export default PageSearch
+export default Page_Search
