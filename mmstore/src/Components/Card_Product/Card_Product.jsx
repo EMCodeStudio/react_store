@@ -15,11 +15,11 @@ import { useNavigate } from "react-router-dom";
 function CardProduct({ dataP }) {
 
     /*     const [isLoading, setLoading] = useState(false) */
-    const navigate = useNavigate();
+    const navigateProduct = useNavigate();
 
     const handleClickProduct = (id) => {
         // Navegar a la ruta del componente2 y pasar el id como parámetro en la URL
-       navigate(`/product/${id}`)
+       navigateProduct(`/product/${id}`)
     };
 
 
