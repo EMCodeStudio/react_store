@@ -1,10 +1,11 @@
 import React from 'react'
 import CategoryView from '../../Components/Category_View/Category_View'
 
-export const PageCategory = () => {
+  const PageCategory = () => {
     return (
         <>
           <CategoryView/>
         </>
     )
 }
+export default PageCategory
