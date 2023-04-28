@@ -58,12 +58,12 @@ function Header_Menu() {
 
                                     <NavDropdown className=' linkMenu' title="CATEGORIAS" id={`offcanvasNavbarDropdown-expand-lg`}>
                                         {
-                                            categories.map((dataCategories, index) => {
+                                            categories.map((categoryName, index) => {
                                                 return (
                                                     <NavDropdown.Item key={index}
                                                         onClick={() =>
-                                                            handleClickCategory(dataCategories)} >
-                                                        {dataCategories}
+                                                            handleClickCategory(categoryName)} >
+                                                        {categoryName}
                                                     </NavDropdown.Item>
                                                 )
                                             })

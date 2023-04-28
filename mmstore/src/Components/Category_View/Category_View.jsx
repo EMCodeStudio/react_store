@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import axios from 'axios'
 
 const CategoryView = () => {
 
@@ -13,23 +14,26 @@ const CategoryView = () => {
   useEffect(() => {
     fetchData()
   }, [categoryName])
+
+  console.log('RESULT CATEGORY: ' + data)
+
   return (
 
 
     <div style={{ paddingTop: '150px', paddingBottom: '100px' }}>
-      {
+        {
         data.map((result) => {
 
           return (
 
             <div className="view" key={result.id}>
-              <h2>{result.tittle}</h2>
+              <h2>{result.title}</h2>
             </div>
 
           )
         })
       }
-
+ 
     </div>
   )
 }

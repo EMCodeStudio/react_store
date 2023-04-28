@@ -7,6 +7,7 @@ import Home from './Routes/Home/Home'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import PageProduct from './Routes/Page_Product/Page_Product';
 import PageCategory from './Routes/Page_Category/Page_Category';
+import { PageSearch } from './Routes/Page_Search/Page_Search';
 
 function Layout() {
   return (
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
       {
         path: "/category/:categoryName",
         element: <PageCategory />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/search-products/:productName",
+        element: <PageSearch />,
         errorElement: <ErrorPage />,
       },
     ]
