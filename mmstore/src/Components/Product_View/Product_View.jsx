@@ -28,7 +28,6 @@ const ProductView = () => {
                 PRODUCTO
             </h1>
             <div>
-                
                 <h2>{data.tittle}</h2>
                 <img src={data.image} alt=""  />
                 <p>{data.price}</p>

@@ -19,7 +19,7 @@ function Header_Menu() {
     const navigateCategory = useNavigate()
 
     const handleClickCategory = (categoryName) => {
-        navigateCategory('/category/'.$(categoryName))
+        navigateCategory(`/category/${categoryName}`)
     }
 
 
