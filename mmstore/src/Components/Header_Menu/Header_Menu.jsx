@@ -21,8 +21,6 @@ function Header_Menu() {
     const handleClickCategory = (categoryName) => {
         navigateCategory(`/category/${categoryName}`)
     }
-
-
     const fetchCategories = async () => {
         const result = await servicesCategories()
         setCategories(result.data)
@@ -53,7 +51,7 @@ function Header_Menu() {
                                         <Link to={'/'}>INICIO</Link>
                                     </Nav>
                                     <Nav href="#action2" className='linkMenu'>
-                                        <Link to={'/category'}>OFERTAS</Link>
+                                        <Link to={'/offers'}>OFERTAS</Link>
                                     </Nav>
 
                                     <NavDropdown className=' linkMenu' title="CATEGORIAS" id={`offcanvasNavbarDropdown-expand-lg`}>
@@ -68,7 +66,6 @@ function Header_Menu() {
                                                 )
                                             })
                                         }
-
                                     </NavDropdown>
                                 </Nav>
                                 <Form className="d-flex ">

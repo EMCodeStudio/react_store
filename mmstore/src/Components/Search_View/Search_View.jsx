@@ -1,9 +1,37 @@
-import React from 'react'
+import React, { useState } from "react";
 
-const SearchView = () => {
+function SearchView() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [results, setResults] = useState([]);
+
+  const handleInputChange = (event) => {
+    setSearchTerm(event.target.value);
+    search(event.target.value);
+  };
+
+  const search = (searchTerm) => {
+    const data = ["Manzana", "Banana", "Pera", "Uva", "Melón", "Sandía"];
+    const filteredData = data.filter((item) =>
+      item.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setResults(filteredData);
+  };
+
   return (
-    <div><h1>SearchView</h1></div>
-  )
+    <div>
+      <input
+        type="text"
+        placeholder="Buscar..."
+        value={searchTerm}
+        onChange={handleInputChange}
+      />
+      <ul>
+        {results.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
-export default SearchView
+export default SearchView;
