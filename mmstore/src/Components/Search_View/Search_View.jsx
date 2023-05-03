@@ -3,31 +3,32 @@ import './style.scss'
 import { servicesProducts } from "../../Axios_Services/Services_Products/Services_Products"
 
 function SearchView() {
+
   const [searchTerm, setSearchTerm] = useState("")
   const [productTitles, setProductTitles] = useState([])
 
   const onChange = (event) => {
     setSearchTerm(event.target.value)
   }
-
   const onSearch = (searchTerm) => {
     setSearchTerm(searchTerm)
   }
-
   const fetchProductTitles = async () => {
     const result = await servicesProducts()
     setProductTitles(result.data)
   }
 
   useEffect(() => {
-    fetchProductTitles()
+  
   }, [])
 
   return (
+
+
     <div className="search-container">
       <div className="search-input">
         <input
-          type="text"
+          type="search"
           placeholder="Buscar"
           value={searchTerm}
           onChange={onChange}
@@ -45,7 +46,6 @@ function SearchView() {
           })
           .slice(0, 10)
           .map(renderProductTitle)}
-        <div className="dn"></div>
       </div>
     </div>
   )

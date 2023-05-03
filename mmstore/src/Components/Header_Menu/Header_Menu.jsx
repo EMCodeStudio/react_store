@@ -12,12 +12,16 @@ import SearchIcon from '@mui/icons-material/Search'
 import { Link, useNavigate } from 'react-router-dom'
 import { servicesCategories } from '../../Axios_Services/Services_Categories/Services_Categories'
 import { useEffect, useState } from 'react'
+import { servicesProducts } from '../../Axios_Services/Services_Products/Services_Products'
+import Dropdown from 'react-bootstrap/Dropdown';
 
 function Header_Menu() {
+
     const [categories, setCategories] = useState([])
-
     const navigateCategory = useNavigate()
-
+    const [searchTerm, setSearchTerm] = useState("")
+    const [productTitles, setProductTitles] = useState([])
+    /* ------------------------------------------------------------- */
     const handleClickCategory = (categoryName) => {
         navigateCategory(`/category/${categoryName}`)
     }
@@ -25,10 +29,23 @@ function Header_Menu() {
         const result = await servicesCategories()
         setCategories(result.data)
     }
+    /* ------------------------------------------------------------- */
+    const onChange = (event) => {
+        setSearchTerm(event.target.value)
+    }
+    const onSearch = (searchTerm) => {
+        setSearchTerm(searchTerm)
+    }
+    const fetchProductTitles = async () => {
+        const result = await servicesProducts()
+        setProductTitles(result.data)
+    }
+    /* ------------------------------------------------------------- */
     useEffect(() => {
         fetchCategories()
+        fetchProductTitles()
     }, [])
-
+    /* ------------------------------------------------------------- */
     return (
         <>
             <div className="headerMenu">
@@ -68,10 +85,37 @@ function Header_Menu() {
                                         }
                                     </NavDropdown>
                                 </Nav>
+
+
+
                                 <Form className="d-flex ">
-                                    <InputSearch />
-                                    <ButtonSearch primaryColor><SearchIcon /></ButtonSearch>
+                                    <InputSearch
+                                        value={searchTerm}
+                                        onChange={onChange} />
+                                    <ButtonSearch onClick={() => onSearch(searchTerm)} primaryColor>
+                                        <SearchIcon />
+                                    </ButtonSearch>
+
+                                 
+
                                 </Form>
+
+                                <ul className='containerTitles'>
+                                    {productTitles
+                                        .filter((product) => {
+                                            const searchTermLowerCase = searchTerm.toLowerCase()
+                                            const productTitleLowerCase = product.title.toLowerCase()
+                                            return (
+                                                searchTermLowerCase &&
+                                                productTitleLowerCase.startsWith(searchTermLowerCase) &&
+                                                productTitleLowerCase !== searchTermLowerCase
+                                            )
+                                        })
+                                        .slice(0, 10)
+                                        .map(renderProductTitle)}
+                                    </ul>
+                                   
+                               
                             </Offcanvas.Body>
                         </Navbar.Offcanvas>
                     </Container>
@@ -79,5 +123,20 @@ function Header_Menu() {
             </div>
         </>
     )
+
+
+
+    function renderProductTitle(product) {
+        return (
+            <li
+                onClick={() => onSearch(product.title)}
+                key={product.id}
+            >
+                {product.title}
+
+            </li>
+        )
+    }
 }
+
 export default Header_Menu
