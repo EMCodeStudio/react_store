@@ -1,37 +1,66 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"
+import './style.scss'
+import { servicesProducts } from "../../Axios_Services/Services_Products/Services_Products"
 
 function SearchView() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [results, setResults] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("")
+  const [productTitles, setProductTitles] = useState([])
 
-  const handleInputChange = (event) => {
-    setSearchTerm(event.target.value);
-    search(event.target.value);
-  };
+  const onChange = (event) => {
+    setSearchTerm(event.target.value)
+  }
 
-  const search = (searchTerm) => {
-    const data = ["Manzana", "Banana", "Pera", "Uva", "Melón", "Sandía"];
-    const filteredData = data.filter((item) =>
-      item.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setResults(filteredData);
-  };
+  const onSearch = (searchTerm) => {
+    setSearchTerm(searchTerm)
+  }
+
+  const fetchProductTitles = async () => {
+    const result = await servicesProducts()
+    setProductTitles(result.data)
+  }
+
+  useEffect(() => {
+    fetchProductTitles()
+  }, [])
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Buscar..."
-        value={searchTerm}
-        onChange={handleInputChange}
-      />
-      <ul>
-        {results.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
+    <div className="search-container">
+      <div className="search-input">
+        <input
+          type="text"
+          placeholder="Buscar"
+          value={searchTerm}
+          onChange={onChange}
+        />
+        <button onClick={() => onSearch(searchTerm)}>Buscar</button>
+        {productTitles
+          .filter((product) => {
+            const searchTermLowerCase = searchTerm.toLowerCase()
+            const productTitleLowerCase = product.title.toLowerCase()
+            return (
+              searchTermLowerCase &&
+              productTitleLowerCase.startsWith(searchTermLowerCase) &&
+              productTitleLowerCase !== searchTermLowerCase
+            )
+          })
+          .slice(0, 10)
+          .map(renderProductTitle)}
+        <div className="dn"></div>
+      </div>
     </div>
-  );
+  )
+
+  function renderProductTitle(product) {
+    return (
+      <div
+        className="product-title"
+        onClick={() => onSearch(product.title)}
+        key={product.id}
+      >
+        {product.title}
+      </div>
+    )
+  }
 }
 
-export default SearchView;
+export default SearchView
