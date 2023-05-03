@@ -48,27 +48,4 @@
         border-radius: 0 !important;
     }
 
-    .containerTitles{
-        position: absolute;
-        top: 70px;
-        background-color: white;
-        width:280px;
-        padding: 15px;
-        border-radius: 3px;
-        right: 12px;
-        border: 1px solid gray;
-        &:empty{
-         display: none;       
-        }
-        li{
-            list-style: none;
-            cursor: pointer;
-            &:hover{
-                background-color: aliceblue;
-            }
-           
-        }
-
-    }
 }
-

@@ -13,7 +13,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { servicesCategories } from '../../Axios_Services/Services_Categories/Services_Categories'
 import { useEffect, useState } from 'react'
 import { servicesProducts } from '../../Axios_Services/Services_Products/Services_Products'
-import Dropdown from 'react-bootstrap/Dropdown';
+import { UlSearch } from '../Styled/List/List'
 
 function Header_Menu() {
 
@@ -64,14 +64,13 @@ function Header_Menu() {
                             </Offcanvas.Header>
                             <Offcanvas.Body>
                                 <Nav className="justify-content-end flex-grow-1 "  >
-                                    <Nav className='linkMenu'>
+                                    <Nav className='linkMenu mb-1'>
                                         <Link to={'/'}>INICIO</Link>
                                     </Nav>
-                                    <Nav href="#action2" className='linkMenu'>
+                                    <Nav href="#action2 " className='linkMenu mb-1'>
                                         <Link to={'/offers'}>OFERTAS</Link>
                                     </Nav>
-
-                                    <NavDropdown className=' linkMenu' title="CATEGORIAS" id={`offcanvasNavbarDropdown-expand-lg`}>
+                                    <NavDropdown className=' linkMenu mb-1' title="CATEGORIAS" id={`offcanvasNavbarDropdown-expand-lg`}>
                                         {
                                             categories.map((categoryName, index) => {
                                                 return (
@@ -85,22 +84,15 @@ function Header_Menu() {
                                         }
                                     </NavDropdown>
                                 </Nav>
-
-
-
-                                <Form className="d-flex ">
+                                <Form className="d-flex mt-1">
                                     <InputSearch
                                         value={searchTerm}
                                         onChange={onChange} />
                                     <ButtonSearch onClick={() => onSearch(searchTerm)} primaryColor>
                                         <SearchIcon />
                                     </ButtonSearch>
-
-                                 
-
                                 </Form>
-
-                                <ul className='containerTitles'>
+                                <UlSearch>
                                     {productTitles
                                         .filter((product) => {
                                             const searchTermLowerCase = searchTerm.toLowerCase()
@@ -113,9 +105,7 @@ function Header_Menu() {
                                         })
                                         .slice(0, 10)
                                         .map(renderProductTitle)}
-                                    </ul>
-                                   
-                               
+                                </UlSearch>
                             </Offcanvas.Body>
                         </Navbar.Offcanvas>
                     </Container>
@@ -123,9 +113,6 @@ function Header_Menu() {
             </div>
         </>
     )
-
-
-
     function renderProductTitle(product) {
         return (
             <li
@@ -133,7 +120,6 @@ function Header_Menu() {
                 key={product.id}
             >
                 {product.title}
-
             </li>
         )
     }
