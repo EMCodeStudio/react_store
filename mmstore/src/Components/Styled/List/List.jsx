@@ -20,10 +20,15 @@ p{
 
 const UlSearch = styled.ul`
         position: absolute;
+        @media(max-width: 992px) {
+            top: 240px;
+            left: 16px;
+        }
         top: 70px;
-        background-color: white;
         width: 280px;
+
         padding: 15px;
+        background-color: white;
         border-radius: 3px;
         right: 12px;
         border: 1px solid gray;
