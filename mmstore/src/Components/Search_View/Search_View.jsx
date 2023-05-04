@@ -5,10 +5,43 @@ import { servicesProducts } from "../../Axios_Services/Services_Products/Service
 
 function SearchView() {
 
+
+
   const [categoryNames, setCategoryNames] = useState([])
-  const [checkBoxValues, setCheckBoxValues] = useState({})
   const [products, setProducts] = useState([])
   const [filteredProducts, setFilteredProducts] = useState([])
+
+
+  const fetchCategoryNames = async () => {
+    const resultCategory = await servicesCategories()
+    const categoryNames = resultCategory.data
+    const initialCheckBoxValues = {}
+    categoryNames.forEach((category) => {
+      initialCheckBoxValues[category] = false
+    }
+    )
+    setCategoryNames(categoryNames)
+    setCheckBoxValues(initialCheckBoxValues)
+  }
+
+  const fetchProducts = async () => {
+    const resultProducts = await servicesProducts()
+    setProducts(resultProducts.data)
+  }
+
+
+  useEffect(() => {
+    fetchCategoryNames()
+    fetchProducts()
+  }, [])
+
+
+  const initialCheckBoxValues = {}
+  categoryNames.forEach((category) => {
+    initialCheckBoxValues[category] = false
+  })
+
+  const [checkBoxValues, setCheckBoxValues] = useState(initialCheckBoxValues)
 
   const handleOnCheckBox = (event) => {
     setCheckBoxValues({
@@ -18,20 +51,6 @@ function SearchView() {
 
   }
 
-  const fetchCategoryNames = async () => {
-    const resultCategory = await servicesCategories()
-    setCategoryNames(resultCategory.data)
-  }
-
-  const fetchProducts = async () => {
-    const resultProducts = await servicesProducts()
-    setProducts(resultProducts.data)
-  }
-
-  useEffect(() => {
-    fetchProducts()
-    fetchCategoryNames()
-  }, [])
 
 
   useEffect(() => {
