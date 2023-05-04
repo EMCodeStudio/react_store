@@ -48,8 +48,7 @@ function CardProduct({ dataP }) {
 
                         <ButtonProduct
 
-                            
-
+                        
                             onClick={() => handleClickProduct(dataP.id)}>
                             {/*   <p>
                                 {isLoading ? 'Cargan...' : 'Comprar'}

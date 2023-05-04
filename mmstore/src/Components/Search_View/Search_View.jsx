@@ -5,12 +5,9 @@ import { servicesProducts } from "../../Axios_Services/Services_Products/Service
 
 function SearchView() {
 
-
-
   const [categoryNames, setCategoryNames] = useState([])
   const [products, setProducts] = useState([])
   const [filteredProducts, setFilteredProducts] = useState([])
-
 
   const fetchCategoryNames = async () => {
     const resultCategory = await servicesCategories()
@@ -18,8 +15,7 @@ function SearchView() {
     const initialCheckBoxValues = {}
     categoryNames.forEach((category) => {
       initialCheckBoxValues[category] = false
-    }
-    )
+    })
     setCategoryNames(categoryNames)
     setCheckBoxValues(initialCheckBoxValues)
   }
@@ -29,12 +25,10 @@ function SearchView() {
     setProducts(resultProducts.data)
   }
 
-
   useEffect(() => {
     fetchCategoryNames()
     fetchProducts()
   }, [])
-
 
   const initialCheckBoxValues = {}
   categoryNames.forEach((category) => {
@@ -48,27 +42,23 @@ function SearchView() {
       ...checkBoxValues,
       [event.target.value]: event.target.checked
     })
-
   }
-
-
 
   useEffect(() => {
     const selectedCategories = Object.entries(checkBoxValues)
       .filter(([categoryName, checked]) => checked)
       .map(([categoryName, checked]) => categoryName)
-
     const filteredProducts = products.filter(product => {
       return selectedCategories.includes(product.category)
     })
     setFilteredProducts(filteredProducts)
   }, [checkBoxValues, products])
 
+  console.log('ESTADOS CHECK: ' + filteredProducts.length)
+
   return (
     <div className="search-container">
-
       <h1>Filtros</h1>
-
       {categoryNames.map((dataCategoryNames, index) => {
         return (
           <div className="checks" key={index}>
@@ -85,11 +75,17 @@ function SearchView() {
         )
       })}
 
+     {
+      filteredProducts.length > 0 ? 
+      'si':
+      'no'
+     }
       <ul>
         {filteredProducts.map((product, index) => (
           <li key={index}>{product.title}</li>
         ))}
       </ul>
+
     </div>
   )
 }
