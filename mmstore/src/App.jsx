@@ -13,7 +13,7 @@ import Page_Search from './Routes/Page_Search/Page_Search';
 function Layout() {
   return (
     <div>
-      <Header_Menu />
+      {/* <Header_Menu /> */}
       <Outlet />
       <Footer />
     </div>

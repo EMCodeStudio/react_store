@@ -1,23 +1,5 @@
 .search-container {
-
-    .search-input {
-        width: 100%;
-        display: flex;
-        align-items: center;
-       
-        flex-direction: column;
-
-        .product-title {
-            width: 280px;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid green;
-
-            cursor: pointer;
-
-            &:empty {
-                border: none;
-            }
-        }
-    }
+background-color: bisque;
+    height: 300px;
+    width: 100%;
 }
