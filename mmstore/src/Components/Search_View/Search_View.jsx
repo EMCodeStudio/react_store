@@ -8,8 +8,8 @@ function SearchView() {
   const [checkBoxValue, setCheckBoxValue] = useState({})
 
   const handleOnCheckBox = (event) => {
-    setCategoryName({
-      ...categoryName,
+    setCheckBoxValue({
+      ...checkBoxValue,
       [event.target.value]: event.target.checked
     });
 
@@ -41,7 +41,8 @@ function SearchView() {
               type="checkbox"
               name={dataCategoryName}
               value={dataCategoryName}
-              id={dataCategoryName} />
+              id={dataCategoryName}
+            />
             <label htmlFor={dataCategoryName}>{dataCategoryName}</label>
           </div>
         )
