@@ -27,22 +27,23 @@ function SearchView() {
     const resultProducts = await servicesProducts()
     setProducts(resultProducts.data)
   }
-  console.log('RESPONSE: ', categoryNames)
 
   useEffect(() => {
+    fetchProducts()
+    fetchCategoryNames()
+  }, [])
 
+
+  useEffect(() => {
     const selectedCategories = Object.entries(checkBoxValues)
-      .filter(([categoryNames, checked]) => checked)
-      .map(([categoryNames, checked]) => categoryName)
+      .filter(([categoryName, checked]) => checked)
+      .map(([categoryName, checked]) => categoryName)
 
     const filteredProducts = products.filter(product => {
-      return selectedCategories.includes(products.category)
+      return selectedCategories.includes(product.category)
     })
     setFilteredProducts(filteredProducts)
-
-    fetchCategoryNames()
-    fetchProducts()
-  }, [checkBoxValues])
+  }, [checkBoxValues, products])
 
   return (
     <div className="search-container">
@@ -66,10 +67,10 @@ function SearchView() {
       })}
 
       <ul>
-      {filteredProducts.map((product, index) => (
-        <li key={index}>{product.title}</li>
-      ))}
-    </ul>
+        {filteredProducts.map((product, index) => (
+          <li key={index}>{product.title}</li>
+        ))}
+      </ul>
     </div>
   )
 }
