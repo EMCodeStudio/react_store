@@ -1,54 +1,77 @@
-import React, { useState, useEffect } from "react";
-import './style.scss';
-import { servicesCategories } from "../../Axios_Services/Services_Categories/Services_Categories";
+import React, { useState, useEffect } from "react"
+import './style.scss'
+import { servicesCategories } from "../../Axios_Services/Services_Categories/Services_Categories"
+import { servicesProducts } from "../../Axios_Services/Services_Products/Services_Products"
 
 function SearchView() {
 
-  const [categoryName, setCategoryName] = useState([]);
-  const [checkBoxValue, setCheckBoxValue] = useState({})
+  const [categoryNames, setCategoryNames] = useState([])
+  const [checkBoxValues, setCheckBoxValues] = useState({})
+  const [products, setProducts] = useState([])
+  const [filteredProducts, setFilteredProducts] = useState([])
 
   const handleOnCheckBox = (event) => {
-    setCheckBoxValue({
-      ...checkBoxValue,
+    setCheckBoxValues({
+      ...checkBoxValues,
       [event.target.value]: event.target.checked
-    });
+    })
 
-  };
+  }
 
-  const fetchCategoryName = async () => {
-    const result = await servicesCategories();
-    setCategoryName(result.data);
-  };
+  const fetchCategoryNames = async () => {
+    const resultCategory = await servicesCategories()
+    setCategoryNames(resultCategory.data)
+  }
 
-  console.log('RESPONSE: ', categoryName);
+  const fetchProducts = async () => {
+    const resultProducts = await servicesProducts()
+    setProducts(resultProducts.data)
+  }
+  console.log('RESPONSE: ', categoryNames)
 
   useEffect(() => {
-    fetchCategoryName();
-  }, []);
+
+    const selectedCategories = Object.entries(checkBoxValues)
+      .filter(([categoryNames, checked]) => checked)
+      .map(([categoryNames, checked]) => categoryName)
+
+    const filteredProducts = products.filter(product => {
+      return selectedCategories.includes(products.category)
+    })
+    setFilteredProducts(filteredProducts)
+
+    fetchCategoryNames()
+    fetchProducts()
+  }, [checkBoxValues])
 
   return (
     <div className="search-container">
 
       <h1>Filtros</h1>
 
-      {categoryName.map((dataCategoryName, index) => {
-
-
+      {categoryNames.map((dataCategoryNames, index) => {
         return (
           <div className="checks" key={index}>
             <input
               onChange={handleOnCheckBox}
               type="checkbox"
-              name={dataCategoryName}
-              value={dataCategoryName}
-              id={dataCategoryName}
+              name={dataCategoryNames}
+              value={dataCategoryNames}
+              id={dataCategoryNames}
+              checked={checkBoxValues[dataCategoryNames]}
             />
-            <label htmlFor={dataCategoryName}>{dataCategoryName}</label>
+            <label htmlFor={dataCategoryNames}>{dataCategoryNames}</label>
           </div>
         )
       })}
+
+      <ul>
+      {filteredProducts.map((product, index) => (
+        <li key={index}>{product.title}</li>
+      ))}
+    </ul>
     </div>
-  );
+  )
 }
 
-export default SearchView;
+export default SearchView
