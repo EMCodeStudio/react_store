@@ -1,13 +1,14 @@
 .product-view {
+    background-color: bisque;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 
     .image-gallery {
+        background-color: green;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
-
         img {
             width: 100%;
             height: auto;
@@ -15,11 +16,9 @@
         }
     }
 
-    .product-details {
-        align-self: start;
-    }
-
+    
     .main-image {
+        background-color: yellow;
         justify-self: end;
         align-self: start;
 
@@ -28,6 +27,12 @@
             height: auto;
         }
     }
+
+    .product-details {
+        background-color: blue;
+        align-self: start;
+    }
+
 
     @media (max-width: 768px) {
         .product-view {

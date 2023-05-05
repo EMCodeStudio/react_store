@@ -8,10 +8,9 @@ import PageSearch from '../Page_Search/Page_Search'
 const Home = () => {
   return (
     <div className="containerHome">
-    
       <ServicesHome />
       <PageSearch />
-      {/* <ProductsHome /> */}
+ {/*       <ProductsHome />  */}
     </div>
   )
 }
