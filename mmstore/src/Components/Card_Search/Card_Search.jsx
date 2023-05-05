@@ -1,31 +1,33 @@
 import React from 'react'
-import { divContainerSearch } from '../Styled/Cards/Cards'
+import './Card_Search.scss'
 
-const CardSearch = () => {
+
+const CardSearch = ({dataSearch}) => {
 
 
     return (
         <>
-            <divContainerSearch>
 
-                <div className="row">
-                    
-                    <div className="left">
-                        <img src="" alt="" />
+      
+         
+                <div className="rowSearch">
+
+                    <div className="leftSearch">
+                        <img src={dataSearch.image} alt="" />
                     </div>
 
-                    <div className="rigth">
-                     <div className="titles">
-                            <h6>Producto</h6>
-                            <p>precio</p>
+                    <div className="rigthSearch">
+                     <div className="titleSearch">
+                            <h6>{dataSearch.title}</h6>
+                            <p>{dataSearch.price}</p>
                         </div>
-                        <div className="options">
+                        <div className="optionSearch">
                             <button>Ver Detalles</button>
                         </div>
                     </div>
 
-                </div>
-            </divContainerSearch>
+                </div> 
+          
         </>
     )
 }

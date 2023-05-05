@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import './style.scss'
 import { servicesCategories } from "../../Axios_Services/Services_Categories/Services_Categories"
 import { servicesProducts } from "../../Axios_Services/Services_Products/Services_Products"
+import CardSearch from "../Card_Search/Card_Search"
 
 function SearchView() {
 
@@ -58,7 +59,9 @@ function SearchView() {
 
   return (
     <div className="search-container">
+
       <h1>Filtros</h1>
+      
       {categoryNames.map((dataCategoryNames, index) => {
         return (
           <div className="checks" key={index}>
@@ -80,11 +83,13 @@ function SearchView() {
       'si':
       'no'
      }
-      <ul>
-        {filteredProducts.map((product, index) => (
-          <li key={index}>{product.title}</li>
-        ))}
-      </ul>
+      
+        {filteredProducts.map((product, index) => {
+          return(
+            <CardSearch key={index} dataSearch={product}/>
+          )
+        })}
+  
 
     </div>
   )
