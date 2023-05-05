@@ -25,11 +25,13 @@ const ProductView = () => {
   return (
     <>
       <div className="product-view">
+
         <div className="image-gallery">
           <img src="imagen1.jpg" alt="Imagen 1" />
           <img src="imagen2.jpg" alt="Imagen 2" />
           <img src="imagen3.jpg" alt="Imagen 3" />
         </div>
+        
         <div className="main-image">
           <img src={data.image} alt="Imagen grande del producto" />
         </div>
@@ -39,6 +41,7 @@ const ProductView = () => {
           <p>Precio: ${data.price}</p>
           <p>Descripción: {data.description}.</p>
         </div>
+
       </div>
 
     </>
