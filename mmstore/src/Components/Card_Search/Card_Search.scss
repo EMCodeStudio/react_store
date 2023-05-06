@@ -1,42 +1,51 @@
 .containerSearch {
     width: 100%;
     padding: 15px;
+
     .rowSearch {
-        border: 2px solid black;
+
+        border: 2px solid gray;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        background-color: white;
+      /*   background-color: white; */
         padding: 10px;
         min-height: 204px;
         max-height: 400px;
         gap: 10px;
+
         .leftSearch {
-            background-color: red;
+          /*   background-color: red; */
             min-width: 250px;
             img {
                 max-height: 180px;
-                max-width: 300px;
+                max-width: 250px;
             }
         }
+
         .rightSearch {
-           overflow-y: hidden; 
-            background-color: blue;
+            min-width: 210px;
+            width: 75%;
+           /*  background-color: blue; */
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-          
+
             .titleSearch {
+                padding-top: 5%;
+                min-width: 200px;
+                width: 60%;
                 max-width: 400px;
-                background-color: aqua;
+                /* background-color: aqua; */
             }
 
             .optionSearch {
-                height: 100%;
-                
-                background-color: brown;
-                
-                
+                display: flex;
+                justify-content: end;
+                min-width: 200px;
+                width: 45%;
+               /*  background-color: brown; */
+                align-items: center;
             }
         }
     }

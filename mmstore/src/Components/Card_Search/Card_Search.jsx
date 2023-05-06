@@ -1,6 +1,7 @@
 import React from 'react'
 import './Card_Search.scss'
-
+import { ButtonProduct } from '../Styled/Buttons/Buttons'
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart'
 
 const CardSearch = ({ dataSearch }) => {
 
@@ -18,7 +19,15 @@ const CardSearch = ({ dataSearch }) => {
                             <p>{dataSearch.price}</p>
                         </div>
                         <div className="optionSearch">
-                            <button>Ver Detalles</button>
+                           {/*  <button>Ver Detalles</button> */}
+                           <ButtonProduct
+                           >
+                            {/*   <p>
+                                {isLoading ? 'Cargan...' : 'Comprar'}
+                            </p> */}
+                            Comprar
+                            <AddShoppingCartIcon className='icon' />
+                        </ButtonProduct>
                         </div>
                     </div>
                 </div>

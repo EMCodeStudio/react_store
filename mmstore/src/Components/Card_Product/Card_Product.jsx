@@ -2,6 +2,7 @@
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart'
+
 import { ButtonProduct } from '../Styled/Buttons/Buttons'
 import './Card_Product.scss'
 /* import { useEffect, useState } from 'react' */
@@ -47,8 +48,6 @@ function CardProduct({ dataP }) {
                         <Card.Title  >{dataP.title}</Card.Title>
 
                         <ButtonProduct
-
-                        
                             onClick={() => handleClickProduct(dataP.id)}>
                             {/*   <p>
                                 {isLoading ? 'Cargan...' : 'Comprar'}
