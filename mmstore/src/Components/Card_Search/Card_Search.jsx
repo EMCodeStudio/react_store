@@ -11,23 +11,27 @@ const CardSearch = ({ dataSearch }) => {
             <div className="containerSearch">
                 <div className="rowSearch">
                     <div className="leftSearch">
-                        <img src={dataSearch.image} alt="" />
-                    </div>
-                    <div className="rightSearch">
+                        <div className="imageSearch">
+                            <img src={dataSearch.image} alt="" />
+                        </div>
+
                         <div className="titleSearch">
                             <h6>{dataSearch.title}</h6>
                             <p>{dataSearch.price}</p>
                         </div>
+                    </div>
+                    <div className="rightSearch">
+
                         <div className="optionSearch">
-                           {/*  <button>Ver Detalles</button> */}
-                           <ButtonProduct
-                           >
-                            {/*   <p>
+                            {/*  <button>Ver Detalles</button> */}
+                            <ButtonProduct
+                            >
+                                {/*   <p>
                                 {isLoading ? 'Cargan...' : 'Comprar'}
                             </p> */}
-                            Comprar
-                            <AddShoppingCartIcon className='icon' />
-                        </ButtonProduct>
+                                Comprar
+                                <AddShoppingCartIcon className='icon' />
+                            </ButtonProduct>
                         </div>
                     </div>
                 </div>
