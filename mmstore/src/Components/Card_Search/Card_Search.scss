@@ -8,51 +8,55 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-         background-color: white; 
+        background-color: white;
         padding: 10px;
         min-height: 204px;
-        max-height: 400px;
+        max-height: 500px;
         gap: 10px;
 
         .leftSearch {
             display: flex;
             flex-wrap: wrap;
             width: 75%;
-           background-color: red;
-gap: 15px;
-           .imageSearch{
-            width: 32%;
-               img {
-                   max-height: 180px;
-                   max-width: 250px;
-               }
-           }
+         /*    background-color: red; */
+            /*  gap: 15px; */
+
+            .imageSearch {
+                width: 32%;
+                min-width: 250px;
+
+                img {
+                    max-height: 180px;
+                    max-width: 240px;
+                }
+            }
 
             .titleSearch {
-                padding-top: 5%;
-                min-width: 200px;
+                min-width: 230px;
+                padding: 10px;
+
                 width: 50%;
-                max-width: 400px;
-               background-color: aqua;
+                max-width: 600px;
+                background-color: azure;
             }
         }
 
         .rightSearch {
             min-width: 210px;
-         
-           background-color: blue;
+            width: 15%;
+           /*  background-color: blue; */
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
 
-          
+
 
             .optionSearch {
                 display: flex;
-                justify-content: end;
+                justify-content: center;
                 min-width: 200px;
-                width: 45%;
-               background-color: brown;
+
+                background-color: brown;
                 align-items: center;
             }
         }

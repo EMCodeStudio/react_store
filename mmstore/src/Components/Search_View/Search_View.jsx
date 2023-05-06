@@ -78,17 +78,22 @@ function SearchView() {
         )
       })}
 
-     {
+    {/*  {
       filteredProducts.length > 0 ? 
-      'si':
-      'no'
+     
+     'si'
+      :
+      <>
+      <h1>Productos con Campo Busqueda</h1> */}
+      {filteredProducts.map((product, index) => {
+        return(
+          <CardSearch key={index} dataSearch={product}/>
+        )
+      })}
+    {/*   </>
      }
-      
-        {filteredProducts.map((product, index) => {
-          return(
-            <CardSearch key={index} dataSearch={product}/>
-          )
-        })}
+       */}
+       
   
 
     </div>
