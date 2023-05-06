@@ -16,7 +16,6 @@
         }
     }
 
-    
     .main-image {
         background-color: yellow;
         justify-self: end;
@@ -34,11 +33,12 @@
     }
 
 
+
     @media (max-width: 768px) {
-        .product-view {
+      
             grid-template-columns: 1fr;
             grid-template-rows: auto auto;
-        }
+        
 
         .image-gallery {
             grid-template-columns: repeat(3, 1fr);

@@ -44,7 +44,6 @@ function SearchView() {
       [event.target.value]: event.target.checked
     })
   }
-
   useEffect(() => {
     const selectedCategories = Object.entries(checkBoxValues)
       .filter(([categoryName, checked]) => checked)
@@ -54,48 +53,47 @@ function SearchView() {
     })
     setFilteredProducts(filteredProducts)
   }, [checkBoxValues, products])
-
   console.log('ESTADOS CHECK: ' + filteredProducts.length)
 
+
   return (
+
     <div className="search-container">
-
-      <h1>Filtros</h1>
       
-      {categoryNames.map((dataCategoryNames, index) => {
-        return (
-          <div className="checks" key={index}>
-            <input
-              onChange={handleOnCheckBox}
-              type="checkbox"
-              name={dataCategoryNames}
-              value={dataCategoryNames}
-              id={dataCategoryNames}
-              checked={checkBoxValues[dataCategoryNames]}
-            />
-            <label htmlFor={dataCategoryNames}>{dataCategoryNames}</label>
-          </div>
-        )
-      })}
-
-    {/*  {
+      <div className="leftContent">
+        <h1>Filtros</h1>
+        {categoryNames.map((dataCategoryNames, index) => {
+          return (
+            <div className="checks" key={index}>
+              <input
+                onChange={handleOnCheckBox}
+                type="checkbox"
+                name={dataCategoryNames}
+                value={dataCategoryNames}
+                id={dataCategoryNames}
+                checked={checkBoxValues[dataCategoryNames]}
+              />
+              <label htmlFor={dataCategoryNames}>{dataCategoryNames}</label>
+            </div>
+          )
+        })}
+      </div>
+      <div className="rightContent">
+      {/*  {
       filteredProducts.length > 0 ? 
-     
      'si'
       :
       <>
       <h1>Productos con Campo Busqueda</h1> */}
-      {filteredProducts.map((product, index) => {
-        return(
-          <CardSearch key={index} dataSearch={product}/>
-        )
-      })}
-    {/*   </>
+        {filteredProducts.map((product, index) => {
+          return (
+            <CardSearch key={index} dataSearch={product} />
+          )
+        })}
+        {/*   </>
      }
        */}
-       
-  
-
+      </div>
     </div>
   )
 }

@@ -1,4 +1,31 @@
+
 .search-container {
-background-color: bisque;
-    width: 100%;
+   
+    background-color: bisque;
+    display: grid !important;
+    gap: 20px;
+    padding: 5%;
+
+    .leftContent {
+        background-color: darkgreen;
+        grid-column: 1;
+    }
+
+    .rightContent {
+        background-color: darkviolet;
+        grid-column: 2;
+    }
+
+
+    @media (max-width:552px) {
+      grid-column: 1;
+        .leftContent { 
+           grid-column: 1;
+        }
+        .rightContent {
+           grid-column: 1;
+        }
+    }
+
+  
 }
