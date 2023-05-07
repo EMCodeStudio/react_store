@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import CardProduct from '../Card_Product/Card_Product'
 
 const CategoryView = () => {
 
@@ -18,23 +19,15 @@ const CategoryView = () => {
   console.log('RESULT CATEGORY: ' + data)
 
   return (
-
-
-    <div style={{ paddingTop: '150px', paddingBottom: '100px' }}>
+    <>
         {
         data.map((result) => {
-
           return (
-
-            <div className="view" key={result.id}>
-              <h2>{result.title}</h2>
-            </div>
-
+            <CardProduct key={result.id} dataP={result}/>
           )
         })
       }
- 
-    </div>
+    </>
   )
 }
 

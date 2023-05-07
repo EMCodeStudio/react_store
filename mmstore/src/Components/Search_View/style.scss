@@ -14,6 +14,14 @@
     .rightContent {
         background-color: darkviolet;
         grid-column: 2;
+
+        .menu-content{
+            width: 100%;
+            background-color: chartreuse;
+            padding-top: 5%;
+            padding-left: 1%;
+          
+        }
     }
 
 

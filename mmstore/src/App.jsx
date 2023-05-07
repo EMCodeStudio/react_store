@@ -8,12 +8,13 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import PageProduct from './Routes/Page_Product/Page_Product';
 import PageCategory from './Routes/Page_Category/Page_Category';
 import Page_Search from './Routes/Page_Search/Page_Search';
+import PageSearch from './Routes/Page_Search/Page_Search';
 
 
 function Layout() {
   return (
     <div>
-      {/* <Header_Menu /> */}
+      <Header_Menu />
       <Outlet />
       <Footer />
     </div>
@@ -38,14 +39,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/category/:categoryName",
-        element: <PageCategory />,
+        element: <PageSearch />,
         errorElement: <ErrorPage />,
       },
-      {
+      /* {
         path: "/search-products/:productName",
         element: <Page_Search />,
         errorElement: <ErrorPage />,
-      },
+      }, */
     ]
   }
 ])

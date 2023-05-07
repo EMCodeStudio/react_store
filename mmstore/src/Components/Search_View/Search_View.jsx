@@ -3,7 +3,9 @@ import './style.scss'
 import { servicesCategories } from "../../Axios_Services/Services_Categories/Services_Categories"
 import { servicesProducts } from "../../Axios_Services/Services_Products/Services_Products"
 import CardSearch from "../Card_Search/Card_Search"
-
+import CategoryView from "../Category_View/Category_View"
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
 function SearchView() {
 
   const [categoryNames, setCategoryNames] = useState([])
@@ -59,7 +61,7 @@ function SearchView() {
   return (
 
     <div className="search-container">
-      
+
       <div className="leftContent">
         <h1>Filtros</h1>
         {categoryNames.map((dataCategoryNames, index) => {
@@ -79,20 +81,33 @@ function SearchView() {
         })}
       </div>
       <div className="rightContent">
-      {/*  {
-      filteredProducts.length > 0 ? 
-     'si'
-      :
-      <>
-      <h1>Productos con Campo Busqueda</h1> */}
-        {filteredProducts.map((product, index) => {
-          return (
-            <CardSearch key={index} dataSearch={product} />
-          )
-        })}
-        {/*   </>
-     }
-       */}
+
+        {
+          filteredProducts.length > 0 ?
+            <>
+              {filteredProducts.map((product, index) => {
+                return (
+                  <CardSearch key={index} dataSearch={product} />
+                )
+              })}
+            </>
+            :
+
+            <div className="menu-content">
+
+              <Container>
+
+                <Row>
+
+                  <CategoryView />
+
+                </Row>
+
+              </Container>
+
+            </div>
+        }
+
       </div>
     </div>
   )
