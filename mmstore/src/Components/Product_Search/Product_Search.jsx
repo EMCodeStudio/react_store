@@ -11,8 +11,11 @@ const ProductSearch = () => {
     const fetchData = async () => {
         const response = await servicesProducts()
         setDataProducts(response.data)
-
     }
+
+    const filteredProduct = dataProducts.filter((product) =>
+        product.title.toLowerCase().includes(searchTerm.toLowerCase())
+    )
 
     useEffect(() => {
         fetchData()
@@ -21,9 +24,17 @@ const ProductSearch = () => {
     return (
         <>
 
-           <h1>{searchTerm}</h1>
+<ul>
 
+  {  filteredProduct.map(products =>(
+  <li key={products.id}>
+    {products.title}
+  </li>
+  ))
 
+  }
+
+</ul>
         </>
     )
 }

@@ -28,8 +28,8 @@ function Header_Menu() {
     }
 
     const handleSubmitSearch = (event) => {
-        event.preventDefault(searchTerm)
-        navigateProducts(`/products-search/${categoryName}`)
+        event.preventDefault()
+        navigateProducts(`/products-search/${searchTerm}`)
     }
 
     const fetchCategories = async () => {
