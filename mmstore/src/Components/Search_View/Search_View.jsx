@@ -6,6 +6,8 @@ import CardSearch from "../Card_Search/Card_Search"
 import CategoryView from "../Category_View/Category_View"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import ProductSearch from "../Product_Search/Product_Search"
+
 function SearchView() {
 
   const [categoryNames, setCategoryNames] = useState([])
@@ -37,9 +39,7 @@ function SearchView() {
   categoryNames.forEach((category) => {
     initialCheckBoxValues[category] = false
   })
-
   const [checkBoxValues, setCheckBoxValues] = useState(initialCheckBoxValues)
-
   const handleOnCheckBox = (event) => {
     setCheckBoxValues({
       ...checkBoxValues,
@@ -57,11 +57,8 @@ function SearchView() {
   }, [checkBoxValues, products])
   console.log('ESTADOS CHECK: ' + filteredProducts.length)
 
-
   return (
-
     <div className="search-container">
-
       <div className="leftContent">
         <h1>Filtros</h1>
         {categoryNames.map((dataCategoryNames, index) => {
@@ -81,7 +78,6 @@ function SearchView() {
         })}
       </div>
       <div className="rightContent">
-
         {
           filteredProducts.length > 0 ?
             <>
@@ -92,22 +88,16 @@ function SearchView() {
               })}
             </>
             :
-
             <div className="menu-content">
-
               <Container>
-
                 <Row>
-
-                  <CategoryView />
+                  {/*  <CategoryView /> */}
+                  <ProductSearch />
 
                 </Row>
-
               </Container>
-
             </div>
         }
-
       </div>
     </div>
   )

@@ -42,6 +42,11 @@ const router = createBrowserRouter([
         element: <PageSearch />,
         errorElement: <ErrorPage />,
       },
+      {
+        path: "/products/:searchTerm",
+        element: <PageSearch />,
+        errorElement: <ErrorPage />,
+      },
       /* {
         path: "/search-products/:productName",
         element: <Page_Search />,

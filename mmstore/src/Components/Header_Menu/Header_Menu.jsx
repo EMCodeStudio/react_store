@@ -19,12 +19,14 @@ function Header_Menu() {
 
     const [categories, setCategories] = useState([])
     const navigateCategory = useNavigate()
+    const navigateProducts = useNavigate()
     const [searchTerm, setSearchTerm] = useState("")
     const [productTitles, setProductTitles] = useState([])
     /* ------------------------------------------------------------- */
     const handleClickCategory = (categoryName) => {
         navigateCategory(`/category/${categoryName}`)
     }
+
     const fetchCategories = async () => {
         const result = await servicesCategories()
         setCategories(result.data)
@@ -35,6 +37,7 @@ function Header_Menu() {
     }
     const onSearch = (searchTerm) => {
         setSearchTerm(searchTerm)
+        navigateProducts(`/products/${searchTerm}`)
     }
     const fetchProductTitles = async () => {
         const result = await servicesProducts()
