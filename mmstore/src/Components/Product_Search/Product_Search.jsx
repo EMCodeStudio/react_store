@@ -17,36 +17,15 @@ const ProductSearch = () => {
     useEffect(() => {
         fetchData()
     }, [])
+
     return (
         <>
 
-            {dataProducts
-                .filter((product) => {
-                    const searchTermLowerCase = searchTerm.toLowerCase()
-                    const productTitleLowerCase = product.title.toLowerCase()
-                    return (
-                        searchTermLowerCase &&
-                        productTitleLowerCase.startsWith(searchTermLowerCase) &&
-                        productTitleLowerCase !== searchTermLowerCase
-                    )
-                })
-                .slice(0, 10)
-                .map(renderProducts)}
+           <h1>{searchTerm}</h1>
 
 
         </>
     )
-
-    function renderProducts(product) {
-        return (
-            <li
-                onClick={() => onSearch(product.title)}
-                key={product.id}
-            >
-                {product.title}
-            </li>
-        )
-    }
 }
 
 export default ProductSearch

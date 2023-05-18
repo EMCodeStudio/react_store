@@ -27,6 +27,11 @@ function Header_Menu() {
         navigateCategory(`/category/${categoryName}`)
     }
 
+    const handleSubmitSearch = (event) => {
+        event.preventDefault(searchTerm)
+        navigateProducts(`/products-search/${categoryName}`)
+    }
+
     const fetchCategories = async () => {
         const result = await servicesCategories()
         setCategories(result.data)
@@ -37,7 +42,6 @@ function Header_Menu() {
     }
     const onSearch = (searchTerm) => {
         setSearchTerm(searchTerm)
-        navigateProducts(`/products/${searchTerm}`)
     }
     const fetchProductTitles = async () => {
         const result = await servicesProducts()
@@ -87,11 +91,12 @@ function Header_Menu() {
                                         }
                                     </NavDropdown>
                                 </Nav>
-                                <Form className="d-flex mt-1">
+                                <Form className="d-flex mt-1" onSubmit={handleSubmitSearch}>
                                     <InputSearch
+                                        type='search'
                                         value={searchTerm}
                                         onChange={onChange} />
-                                    <ButtonSearch onClick={() => onSearch(searchTerm)} primaryColor>
+                                    <ButtonSearch type='submit' onClick={() => onSearch(searchTerm)} primaryColor>
                                         <SearchIcon />
                                     </ButtonSearch>
                                 </Form>
